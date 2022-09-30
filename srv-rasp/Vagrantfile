@@ -1,6 +1,20 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+$script_hosts = <<-SCRIPT
+echo '192.168.56.11 serveur1-cluster'>> /etc/hosts
+echo '192.168.56.12 serveur2-cluster'>> /etc/hosts
+SCRIPT
+
+$script_stats_haproxy = <<-SCRIPT
+echo 'listen stats'>>/etc/haproxy/haproxy.cfg
+echo '  bind :9999'>>/etc/haproxy/haproxy.cfg
+echo '  mode http'>>/etc/haproxy/haproxy.cfg
+echo '  stats enable'>>/etc/haproxy/haproxy.cfg
+echo '  stats hide-version'>>/etc/haproxy/haproxy.cfg
+echo '  stats uri /stats'>>/etc/haproxy/haproxy.cfg
+SCRIPT
+
 Vagrant.configure("2") do |config|
   # Number of nodes to provision
   numNodes = 2
@@ -26,9 +40,14 @@ Vagrant.configure("2") do |config|
       node.vm.provider "virtualbox" do |v|
           v.name = "Serveur-" + num.to_s
       end
+      node.vm.provision "shell", inline: $script_hosts
       node.vm.provision "shell", path: "scripts/install_sys.sh"
       node.vm.provision "shell", path: "scripts/install_web.sh"
+      node.vm.provision "shell", path: "scripts/install_conf.sh"
+      node.vm.provision "shell", inline: $script_stats_haproxy
     end
   end
- 
+  config.vm.define "Serveur-2" do |clust|
+    clust.vm.provision "shell", path: "scripts/install_cluster.sh"
+  end
 end
