@@ -1,0 +1,23 @@
+.etudiants {
+    list-style-type: none;
+    text-align: center;
+    margin: 10%;
+    padding: 0%;
+}
+
+.titre{
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.etudiants li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+img{
+    border-radius: 3px;
+}
