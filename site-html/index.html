@@ -7,6 +7,13 @@
     <link href="bootstrap.min.css" rel="stylesheet">
 
     <style>
+      
+      body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
       .b-example-divider {
         height: 3rem;
@@ -29,6 +36,14 @@
       .graph{
         width:70%;
         height:30ex;
+      }
+
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
       }
     </style>
 
@@ -151,9 +166,9 @@
 
           
   </body>
-  <footer style="background-color: black;">
+  <footer class="footer">
     <a>
-      <p>Test</p>
+      <p><span style="margin-right: 30px;">PFE 2022-2023</span>-<span style="margin-left: 30px;">APIOU Elodie, CAMILLERI Dorian, CHAPUT Guillaume</span></p>
     </a>
   </footer>
 </html>
