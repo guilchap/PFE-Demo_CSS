@@ -9,6 +9,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { DemoAccueilComponent } from './demo-accueil/demo-accueil.component';
 import { EtudiantsComponent } from './etudiants/etudiants.component';
 import { ProduitsComponent } from './produits/produits.component';
+import { StartRaspberryComponent } from './start-raspberry/start-raspberry.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProduitsComponent } from './produits/produits.component';
     AccueilComponent,
     DemoAccueilComponent,
     EtudiantsComponent,
-    ProduitsComponent
+    ProduitsComponent,
+    StartRaspberryComponent
   ],
   imports: [
     BrowserModule,

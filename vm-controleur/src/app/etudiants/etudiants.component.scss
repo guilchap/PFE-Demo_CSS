@@ -2,6 +2,7 @@
     list-style-type: none;
     text-align: center;
     margin: 10%;
+    margin-top: 0%;
     padding: 0%;
 }
 
@@ -14,10 +15,10 @@
 .etudiants li {
     display: inline-block;
     font-size: 20px;
-    padding: 20px;
     text-align: center;
+    width: 30%;
 }
 
 img{
-    border-radius: 3px;
+    border-radius: 50%;
 }

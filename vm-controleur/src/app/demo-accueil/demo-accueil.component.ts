@@ -17,4 +17,8 @@ export class DemoAccueilComponent implements OnInit {
     this.router.navigateByUrl('');
   }
 
+  start(){
+    this.router.navigateByUrl('startRasp');
+  }
+
 }
