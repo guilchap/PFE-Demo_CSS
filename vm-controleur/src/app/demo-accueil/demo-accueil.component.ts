@@ -21,4 +21,8 @@ export class DemoAccueilComponent implements OnInit {
     this.router.navigateByUrl('startRasp');
   }
 
+  grafana(){
+    this.router.navigateByUrl('grafana');
+  }
+
 }

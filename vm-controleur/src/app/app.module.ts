@@ -10,6 +10,7 @@ import { DemoAccueilComponent } from './demo-accueil/demo-accueil.component';
 import { EtudiantsComponent } from './etudiants/etudiants.component';
 import { ProduitsComponent } from './produits/produits.component';
 import { StartRaspberryComponent } from './start-raspberry/start-raspberry.component';
+import { GrafanaComponent} from './grafana/grafana.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StartRaspberryComponent } from './start-raspberry/start-raspberry.compo
     DemoAccueilComponent,
     EtudiantsComponent,
     ProduitsComponent,
-    StartRaspberryComponent
+    StartRaspberryComponent,
+    GrafanaComponent
   ],
   imports: [
     BrowserModule,
