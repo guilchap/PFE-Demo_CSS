@@ -26,6 +26,18 @@ echo "remplacement fichier ini"
 rm /etc/grafana/grafana.ini
 cp /vagrant/data/grafana.ini /etc/grafana
 
+echo "installation datasource"
+cp /vagrant/data/datasources/default.yaml /usr/share/grafana/conf/provisioning/datasources
+rm /usr/share/grafana/conf/provisioning/datasources/sample.yaml
+
+echo "installation dashboard"
+cp /vagrant/data/dashboard/default.yaml /usr/share/grafana/conf/provisioning/dashboards
+rm /usr/share/grafana/conf/provisioning/dashboards/sample.yaml
+
+echo "installation des graphs"
+mkdir /var/lib/grafana/dashboards
+cp /vagrant/data/dashboard/cluster.json /var/lib/grafana/dashboards
+
 echo "start grafana service"
 systemctl start grafana-server
 systemctl enable grafana-server
