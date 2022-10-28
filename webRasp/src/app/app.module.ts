@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PrincipaleComponent } from './principale/principale.component';
-import { GrafanaComponent } from './grafana/grafana.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,6 @@ import { GrafanaComponent } from './grafana/grafana.component';
     HeaderComponent,
     FooterComponent,
     PrincipaleComponent,
-    GrafanaComponent
   ],
   imports: [
     BrowserModule,

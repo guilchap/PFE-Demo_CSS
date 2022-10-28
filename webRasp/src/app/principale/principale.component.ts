@@ -13,8 +13,4 @@ export class PrincipaleComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goGrafana(){
-    this.router.navigateByUrl('grafana');
-  }
-
 }
