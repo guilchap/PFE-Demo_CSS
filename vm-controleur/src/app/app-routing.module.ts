@@ -6,6 +6,7 @@ import { EtudiantsComponent } from './etudiants/etudiants.component';
 import { ProduitsComponent } from './produits/produits.component';
 import { StartRaspberryComponent } from './start-raspberry/start-raspberry.component';
 import { GrafanaComponent} from './grafana/grafana.component';
+import { environment } from 'src/environments/environment';
 
 const routes: Routes = [
   { path: 'demoAccueil', component: DemoAccueilComponent},
@@ -18,6 +19,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

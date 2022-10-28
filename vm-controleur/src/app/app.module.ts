@@ -11,6 +11,7 @@ import { EtudiantsComponent } from './etudiants/etudiants.component';
 import { ProduitsComponent } from './produits/produits.component';
 import { StartRaspberryComponent } from './start-raspberry/start-raspberry.component';
 import { GrafanaComponent} from './grafana/grafana.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,12 @@ import { GrafanaComponent} from './grafana/grafana.component';
     EtudiantsComponent,
     ProduitsComponent,
     StartRaspberryComponent,
-    GrafanaComponent
+    GrafanaComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
