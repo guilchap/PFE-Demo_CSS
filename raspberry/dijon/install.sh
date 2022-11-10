@@ -18,23 +18,15 @@ apt-get update $APT_OPT \
 apt-get upgrade $APT_OPT \
     >> $LOG_FILE_INSTALL 2>&1
 
-wget -q -O - https://packages.grafana.com/gpg.key | apt-key add -
-echo "deb https://packages.grafana.com/oss/deb stable main" | tee -a /etc/apt/sources.list.d/grafana.list
-
 apt install -y \
     pacemaker \
     corosync \
     pcs \
     fence-agents \
     haproxy \
-    wget \
-    curl \
-    gnupg2 \
-    apt-transport-https \
-    software-properties-common \
-    grafana \
-    git \
     >> $LOG_FILE_INSTALL 2>&1
+
+wget -q -O prometheus.tar.gz https://github.com/prometheus/prometheus/releases/download/v2.40.1/prometheus-2.40.1.linux-amd64.tar.gz
 
 
 echo
