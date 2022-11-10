@@ -24,6 +24,7 @@ apt install -y \
     pcs \
     fence-agents \
     haproxy \
+    apache2 \
     >> $LOG_FILE_INSTALL 2>&1
 
 

@@ -24,6 +24,7 @@ apt install -y \
     pcs \
     fence-agents \
     haproxy \
+    apache2 \
     >> $LOG_FILE_INSTALL 2>&1
 
 wget -q -O prometheus.tar.gz https://github.com/prometheus/prometheus/releases/download/v2.40.1/prometheus-2.40.1.linux-amd64.tar.gz
