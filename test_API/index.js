@@ -1,52 +1,44 @@
 const express = require('express');
-const app = express();
+const cors = require('cors');
 const { exec } = require('child_process');
+
+const app = express();
 const ipAngers = '172.23.1.64';
 const ipDijon = '192.168.56.4';
 const port = 8080;
 
-const http = require('http');
-const httpServer = http.createServer();
+app.get('/',(req,res)=>{
+  res.set('Access-Control-Allow-Origin', '*');
+})
 
-// Mes origines acceptées
-const allowOrigins = ['http://localhost:4200'];
+// app.use(cors())
 
-httpServer.on('request', (request, response) => {
+// app.get('/', function (req, res, next) {
+//   res.json({msg: 'This is CORS-enabled for all origins!'})
+// })
 
-    // On test si l'entête "Origin" fait partie des origines acceptées
-    if (request.headers['origin'] && allowOrigins.includes(request.headers['origin'])) {
+// app.use(function (res) {
 
-        // Si oui alors on renseigne "Access-Control-Allow-Origin" avec l'origine de la requête
-        response.setHeader('Access-Control-Allow-Origin', request.headers['origin']);
-    } else {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.json();
 
-        // Sinon on renseigne "Access-Control-Allow-Origin" à null créant une erreur CORS dans le navigateur
-        response.setHeader('Access-Control-Allow-Origin', 'null');
-    }
+//   //Request methods you wish to allow
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
-    if (request.method === 'OPTIONS') {
-        response.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept, Origin, Authorization');
-        response.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+//   // Request headers you wish to allow
+//   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
 
-        return response.end();
-    }
+//   // Set to true if you need the website to include cookies in the requests sent
+//   // to the API (e.g. in case you use sessions)
+//   res.setHeader('Access-Control-Allow-Credentials', true);
 
-    // suite du traitement ...
-});
+//   // Pass to next layer of middleware
+//   res.send('cors problem fixed:)');
+
+//   logger.debug('Calling res.send');
+// });
 
 console.log('hello console');
-
-// exec("dir", (error, stdout, stderr) => {
-//     if (error) {
-//         console.log(`${error.message}`);
-//         return;
-//     }
-//     if (stderr) {
-//         console.log(`${stderr}`);
-//         return;
-//     }
-//     console.log(`${stdout}`);
-// });
 
 // exec(`ping ${ipDijon}`, (error, stdout, stderr) => {
 //     if (error) {
@@ -76,17 +68,12 @@ console.log('hello console');
 //     res.send('Hello');
 // })
 
-// app.listen(`${port}`, () => {  
-//     console.log(`Serveur à l écoute sur ${port}`);     
-// })
-
 require('http').createServer(function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.end('' +
 `<html>
   <head></head>
   <body>
-    Hello
     <script>
       /********** Browser start ********/
       /* This code is run in the browser */
