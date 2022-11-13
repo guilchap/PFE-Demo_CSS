@@ -49,3 +49,12 @@ p.foot{
 .header{
     background-color: #5B4E9B;
 }
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+#logo{
+    width: 50%;
+}
