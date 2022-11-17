@@ -18,7 +18,7 @@ tar -xvf /tmp/prometheus.tar.gz -C /opt/prometheus --strip=1
 
 echo "=> [4]: Add new config file"
 rm /opt/prometheus/prometheus.yml
-cp /tmp/pfe-demo/raspberry/data/prometheus.yml /opt/prometheus/
+cp /tmp/PFE-Demo_CSS/raspberry/data/prometheus.yml /opt/prometheus/
 
 echo "=> [5]: Start Prometheus"
 systemctl start prometheus
