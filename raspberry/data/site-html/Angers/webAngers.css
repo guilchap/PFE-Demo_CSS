@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0px;
+}
+
+p.text{
+    margin: 0px;
+    color: white;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.princi{
+    text-align: center;
+}
+
+img{
+    display: inline;
+    margin-top: 0;
+}
+
+p.princi{
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+p.foot{
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.pfe{
+    margin-right: 30px;
+}
+
+.noms{
+    margin-left: 30px;
+}
+
+.header{
+    background-color: #5B4E9B;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+#logo{
+    width: 50%;
+}
