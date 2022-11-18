@@ -34,7 +34,7 @@ echo "  static ip_address=$IP_ADDRESS" >> /etc/dhcpd.conf
 service dhcpcd restart
 
 
-echo "=> [3]: Configure DNS"
+echo "=> [3]: Configure DHCP"
 mv /etc/dnsmasq.conf /etc/dnsmasq.conf.old
 echo "interface=$INT_NAME" >> /etc/dnsmasq.conf
 echo "dhcp-range=$DHCP_START,$DHCP_END,$DHCP_MASK,$DHCP_LENGTH" >> /etc/dnsmasq.conf
