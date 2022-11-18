@@ -35,13 +35,13 @@ Par la suite les cartes Raspberry seront appelés par leur utilité. Pour les ca
         ```
    - Installer git et le configurer
         ```
-        apt-get install git
+        sudo apt-get install -y git
         git config http.sslVerify false
         ```
    - Cloner le repository dans le dossier souhaité
         ```
         cd /tmp
-        git clone --branch datacenter-wifi https://github.com/guilchap/PFE-Demo_CSS.git
+        sudo git clone --branch datacenter-wifi https://github.com/guilchap/PFE-Demo_CSS.git
         ```
    - Lancer le script de configuration du Wi-Fi
         ```
@@ -63,13 +63,13 @@ Par la suite les cartes Raspberry seront appelés par leur utilité. Pour les ca
         ```
    - Installer git et le configurer
         ```
-        apt-get install git
+        sudo apt-get install -y git
         git config http.sslVerify false
         ```
    - Cloner le repository dans le dossier souhaité
         ```
         cd /tmp
-        git clone --branch datacenter-wifi https://github.com/guilchap/PFE-Demo_CSS.git
+        sudo git clone --branch datacenter-wifi https://github.com/guilchap/PFE-Demo_CSS.git
         ```
    - Installer tous les packages requis
         ```
