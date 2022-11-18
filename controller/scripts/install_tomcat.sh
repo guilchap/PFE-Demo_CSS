@@ -31,7 +31,7 @@ sh -c 'chmod +x /opt/tomcat/updated/bin/*.sh'
 
 echo "=> [5]: Add new files"
 cp /vagrant/data/tomcat.service /etc/systemd/system/tomcat.service
-cp /vagrant/data/pfe-1.0-SNAPSHOT.war /opt/tomcat/apache-tomcat-9.0.69/webapps/
+cp /vagrant/data/pfe-demo-css.war /opt/tomcat/apache-tomcat-9.0.69/webapps/
 
 echo "=> [6]: Start Tomcat service"
 systemctl daemon-reload
