@@ -13,10 +13,10 @@ echo "=> [1]: Log folder"
 mkdir /var/log/datacenter
 
 echo "=> [1]: Installing required packages..."
-apt-get update $APT_OPT \
-    >> $LOG_FILE_INSTALL 2>&1
-apt-get upgrade $APT_OPT \
-    >> $LOG_FILE_INSTALL 2>&1
+# apt-get update $APT_OPT \
+#     >> $LOG_FILE_INSTALL 2>&1
+# apt-get upgrade $APT_OPT \
+#     >> $LOG_FILE_INSTALL 2>&1
 
 apt install -y \
     pacemaker \

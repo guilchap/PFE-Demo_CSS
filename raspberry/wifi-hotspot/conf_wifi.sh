@@ -15,10 +15,10 @@ echo "----------------------"
 echo "START - Configure WiFi"
 
 echo "=> [1]: Installing required packages..."
-apt-get update $APT_OPT \
-    >> $LOG_FILE_WIFI 2>&1
-apt-get upgrade $APT_OPT \
-    >> $LOG_FILE_WIFI 2>&1    
+# apt-get update $APT_OPT \
+#     >> $LOG_FILE_WIFI 2>&1
+# apt-get upgrade $APT_OPT \
+#     >> $LOG_FILE_WIFI 2>&1    
 
 apt-get install \
     network-manager \
