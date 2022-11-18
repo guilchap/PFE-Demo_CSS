@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="produit.css">
+</head>
+
+<body>
+    <p>
+        Vous trouverez ici la description des différents produits utilisés dans le projet du Démonstrateur de l'option CSS.
+    </p>
+
+    <h2>Démonstration de l’infrastructure basique d’un système informatique</h2>
+    <p>Le principe est de montrer la supervision, la redondance et la répartition de charge d’un système informatique.
+        <ul>
+            <li>
+                Raspberry PI
+            </li>
+            <p>Elles symbolisent deux Data Center, un à Angers, le master, et un a Dijon, l'esclave.
+                Ces deux Datacenter sont en cluster. Lorsque le Datacenter d'angers arrête de 
+                fonctionner (on débranche la Raspberry), le Datacenter du Dijon prend le relais. Dans notre démonstration,
+                les deux Raspberry PI contiennent un simple site web (apache). </br>
+                Une troisième Raspberry PI contient un doncgle Wifi. Elle va créer un wifi qui va permettre de connecter les deux Datacenter
+                à notre VM controleur.
+            </p>
+            <li>
+                VM Controleur
+            </li>
+            <p>
+                Elle va permettre de controler tout le projet. Son OS est Debian Bullseyes.
+                Un site web (apache) est herbergé et va permettre le controle du projet. Ce site web est développé en java spring.
+                Grâce à la VM controleur, nous allons lancer des scripts shell afin vérifier l'état des Raspberry PI 
+                (que ça soit l'installation et les connection entre elles et à la VM).
+                Elle va également nous permettre de superviser les Raspberry grâce à Grafana.
+            </p>
+        </ul>
+        <p class="image">
+        <img src="./Démo Infra3.jpg" alt="Démo_Infrastructure">
+        </p>
+    </p>
+    <h3>Arrive très bientot ...</h3>
+
+    <button class="bouton">Retour</button>
+    <!-- <h2>Exercice d'infrastructure Linux</h2>
+    <p>
+        <ul>
+            <li>
+
+            </li>
+        </ul>
+        <p>
+            <img src="./Exercice Linux Shell1.jpg" alt="Exercice infrastructure">
+        </p>
+    </p>
+    <h2>Exercice de sécurité</h2>
+    <p></p> -->
+</body>
+
+</html>
