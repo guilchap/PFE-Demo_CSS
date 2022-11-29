@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+<!--    <title>Title</title>-->
+    <link th:href="@{/css/grafana.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="icon" type="image/x-icon" th:href="@{/image/logo_PFE.png}">
+</head>
+<body>
+    <div>
+      <div th:replace="header/header"></div>
+    </div>
+    <div class="noCopy">
+        <table id="dashboard">
+
+            <tr id="name">
+                <th>
+                    <h1>Angers</h1>
+                </th>
+                <th>
+                    <h1>Dijon</h1>
+                </th>
+            </tr>
+            <tr id="proco">
+                <td>
+                    <iframe src="http://192.168.56.11:3000/d-solo/tDT3jvV4z/system-monitoring?orgId=1&refresh=1s&from=now-5m&to=now&theme=light&panelId=4" width="40%" height="200" frameborder="0"></iframe>
+                </td>
+                <td>
+                    <iframe src="http://192.168.56.11:3000/d-solo/tDT3jvV4z/system-monitoring?orgId=1&refresh=1s&from=now-5m&to=now&theme=light&panelId=4" width="40%" height="200" frameborder="0"></iframe>
+                </td>
+            </tr>
+            <tr id="recieved">
+                <td>
+                    <iframe class="graph" src="http://192.168.56.11:3000/d-solo/tDT3jvV4z/system-monitoring?orgId=1&refresh=1s&from=now-5m&to=now&theme=light&panelId=8" frameborder="0"></iframe>
+                </td>
+                <td>
+                    <iframe class="graph" src="http://192.168.56.11:3000/d-solo/tDT3jvV4z/system-monitoring?orgId=1&refresh=1s&from=now-5m&to=now&theme=light&panelId=8" frameborder="0"></iframe>
+                </td>
+            </tr>
+            <tr id="send">
+                <td>
+                    <iframe class="graph" src="http://192.168.56.11:3000/d-solo/tDT3jvV4z/system-monitoring?orgId=1&refresh=1s&from=now-5m&to=now&theme=light&panelId=6" frameborder="0"></iframe>
+                </td>
+                <td>
+                    <iframe class="graph" src="http://192.168.56.11:3000/d-solo/tDT3jvV4z/system-monitoring?orgId=1&refresh=1s&from=now-5m&to=now&theme=light&panelId=6" frameborder="0"></iframe>
+                </td>
+            </tr>
+        </table>
+        <a th:href="@{/demo}">
+            <button class="retour">Retour</button>
+        </a>
+        <br>
+    </div>
+    <div>
+      <div th:replace="footer/footer"></div>
+    </div>
+</body>
+</html>

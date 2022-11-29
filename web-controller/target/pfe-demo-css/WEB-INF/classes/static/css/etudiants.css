@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+}
+
+.etudiants {
+    list-style-type: none;
+    text-align: center;
+    margin: 10%;
+    margin-top: 0%;
+    padding: 0%;
+}
+
+.titre{
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.etudiants li {
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.etu{
+    border-radius: 50%;
+}
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    margin: auto;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    /*border: 1px solid #f1f1f1;*/
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border-radius: 50%;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    border-radius: 50%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    border-radius: 50%;
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    border-radius: 50%;
+    margin: auto;
+    background-color: #5B4E9B;
+    color: white;
+    transform: rotateY(180deg);
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+<!--    <title>Title</title>-->
+    <link th:href="@{/css/etudiants.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="icon" type="image/x-icon" th:href="@{/image/logo_PFE.png}">
+</head>
+<body>
+    <div>
+        <div th:replace="header/header"></div>
+    </div>
+    <p class="titre">L'equipe du projet</p>
+    <ul class="etudiants">
+        <li>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="etu" th:src="@{/image/photo_Dorian.jpg}" alt="Dorian" width="100%" height="auto">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Dorian</h1>
+                        <p>Spécialité : </p>
+                        <p>Logiciel et Données</p>
+                    </div>
+                </div>
+            </div>
+<!--            <img class="etu" th:src="@{/image/photo_Dorian.jpg}" alt="Dorian" width="45%" height="auto">-->
+<!--            <p>Dorian <br> Spécialité Logiciel et Données</p>-->
+        </li>
+        <li>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="etu" th:src="@{/image/photo_Guillaume.jpg}" alt="Guillaume" width="100%" height="auto">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Guillaume</h1>
+                        <p>Spécialité : </p>
+                        <p>Cloud, Système et Sécurité</p>
+                    </div>
+                </div>
+            </div>
+<!--            <img class="etu" th:src="@{/image/photo_Guillaume.jpg}" alt="Guillaume" width="45%" height="auto">-->
+<!--            <p>Guillaume <br> Spécialité Cloud, Système et Sécurité</p>-->
+        </li>
+        <li>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="etu" th:src="@{/image/photo_Elodie.png}" alt="Elodie" width="100%" height="auto">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Elodie</h1>
+                        <p>Spécialité : </p>
+                        <p>Cloud, Système et Sécurité</p>
+                    </div>
+                </div>
+            </div>
+<!--            <img class="etu" th:src="@{/image/photo_Elodie.png}" alt="Elodie" width="45%" height="auto">-->
+<!--            <p>Elodie <br> Spécialité Cloud, Système et Sécurité</p>-->
+        </li>
+    </ul>
+    <div>
+        <div th:replace="footer/footer"></div>
+    </div>
+</body>
+</html>

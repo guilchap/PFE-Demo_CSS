@@ -1,0 +1,40 @@
+body {
+    margin: 0%;
+}
+
+#product {
+    margin: 5%;
+}
+
+.description{
+    margin-right: 10%;
+    font-size: 30px;
+}
+
+.image{
+    text-align: center;
+}
+
+#demoInfra {
+    width: 45%;
+    height: auto;
+}
+
+button {
+    font-size: 20px;
+    background-color: hsl(219, 72%, 38%);
+    color: white;
+    border-color: hsl(219, 71%, 32%);
+    margin-left: 35px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bouton:hover {background-color: hsl(219, 55%, 55%);}
+
+.bouton:active {
+    background-color: hsl(219, 55%, 55%);
+    transform: translateY(2px);
+}
