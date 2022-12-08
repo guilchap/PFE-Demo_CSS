@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
 
 
   # Define Number of RAM for each node
+  config.vm.network "public_network"
   config.vm.provider "virtualbox" do |v|
     v.customize ["modifyvm", :id, "--groups", "/S9-pfe"]
     v.customize ["modifyvm", :id, "--cpus", "1"]
