@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!--    <title>Title</title>-->
+    <link th:href="@{/css/homeDemo.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="icon" type="image/x-icon" th:href="@{/image/logo_PFE.png}">
+</head>
+<body>
+    <div>
+        <div th:replace="header/header"></div>
+    </div>
+    <p id="titre">Que voulez-vous faire ?</p>
+    <ul class="bouton">
+        <li>
+            <!-- Lance script pour création des docker -->
+            <button>Création de conteneur Docker Linux</button>
+        </li>
+        <li>
+            <!-- Lance script pour destruction des docker -->
+            <button>Destruction conteneur Docker Linux</button>
+        </li>
+        <li>
+            <a th:href="@{/infraweb}">
+                <button>Sites Web</button>
+            </a>
+        </li>
+    </ul>
+    <a th:href="@{/}">
+        <button class="retour" type="submit">Retour</button>
+    </a>
+    <div>
+        <div th:replace="footer/footer"></div>
+    </div>
+</body>
+</html>

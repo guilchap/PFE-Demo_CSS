@@ -57,4 +57,10 @@ public class ApplicationController {
     public String grafana(){
         return "grafana";
     }
+
+    @GetMapping("/infra")
+    public String infra(){return "homeInfra";}
+
+    @GetMapping("/infraweb")
+    public String infraWeb(){return "webClients";}
 }
