@@ -13,7 +13,7 @@ RUN echo root:network | chpasswd
 
 RUN mkdir /run/sshd
 
-#COPY script_demarrage.sh .
+COPY site_web_docker /home/etudiant/site_web_docker/
 
 EXPOSE 80
 

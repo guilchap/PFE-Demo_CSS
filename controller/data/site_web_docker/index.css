@@ -1,0 +1,61 @@
+p.foot {
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    font-size: 100%;
+}
+
+.pfe{
+    margin-right: 30px;
+}
+
+.noms{
+    margin-left: 30px;
+}
+
+div.titre{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+h1{
+    background-color: rgb(240, 199, 110);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 200%;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+td.image{
+    width: 10%;
+}
+
+td.text{
+    text-align: left;
+    font-size: 150%;
+    padding-left: 10%;
+}
+
+img{
+    width:100%; 
+    height:auto;
+}
+
+p{
+    text-align: center;
+    font-size: 150%;
+}
+
+p.bravo{
+    font-weight: bold;
+    font-size: 300%;
+}
