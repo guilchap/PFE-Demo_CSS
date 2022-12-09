@@ -20,8 +20,11 @@ apt-get update $APT_OPT \
 apt-get install $APT_OPT \
   wget \
   gnupg \
+  gnupg2 \
   unzip \
   curl \
+  apt-transport-https \
+  software-properties-common \
   >> $LOG_FILE 2>&1
   
 echo "=> [2]: Server configuration"

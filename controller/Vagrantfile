@@ -1,39 +1,28 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-
-Vagrant.configure("2") do |config|
-  # Number of nodes to provision
-  numNodes = 1
-
-  # IP Address Base for private network
-  ipAddrPrefix1 = "192.168.56.1"
-
-
-  # Define Number of RAM for each node
-  config.vm.network "public_network"
-  config.vm.provider "virtualbox" do |v|
-    v.customize ["modifyvm", :id, "--groups", "/S9-pfe"]
-    v.customize ["modifyvm", :id, "--cpus", "1"]
-    v.customize ["modifyvm", :id, "--memory", 1024]
-  end
-
-  # Provision Config for each of the nodes
-  1.upto(numNodes) do |num|
-    nodeName = ("controleur-" + num.to_s).to_sym
-    config.vm.define nodeName do |node|
-      node.vm.host_name = nodeName
-      node.vm.box = "debian/bullseye64"
-      node.vm.network :private_network, ip: ipAddrPrefix1 + num.to_s
-      node.vm.provider "virtualbox" do |v|
-          v.name = "controleur-" + num.to_s
-      end
-
-      node.vm.provision "shell", path: "scripts/install_sys.sh"
-      node.vm.provision "shell", path: "scripts/install_web.sh"
-      node.vm.provision "shell", path: "scripts/install_grafana.sh"
-      node.vm.provision "shell", path: "scripts/install_tomcat.sh"
-      node.vm.provision "shell", path: "scripts/install_docker.sh"
+Vagrant.configure("2") do |config|  
+    # Customize machine
+    config.vm.provider "virtualbox" do |v|
+      v.customize ["modifyvm", :id, "--cpus", "1"]
+      v.customize ["modifyvm", :id, "--memory", 1024]
+      v.customize ["modifyvm", :id, "--groups", "/PFE"]
+    end
+  
+    # Provision Config
+    config.vm.define "controller" do |machine|
+        machine.vm.host_name = "srv-controller"
+        machine.vm.box = "debian/bullseye64"
+        machine.vm.network :public_network
+        # machine.vm.network :public_network
+        machine.vm.provider "virtualbox" do |v|
+            v.name = "controller-1"
+        end
+        machine.vm.provision "shell", path: "scripts/install_sys.sh"
+        machine.vm.provision "shell", path: "scripts/install_web.sh"
+        machine.vm.provision "shell", path: "scripts/install_grafana.sh"
+        machine.vm.provision "shell", path: "scripts/install_tomcat.sh"
+        machine.vm.provision "shell", path: "scripts/install_docker.sh"
     end
 end
-end
+  

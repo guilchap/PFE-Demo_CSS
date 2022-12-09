@@ -16,11 +16,6 @@ apt-get update $APT_OPT \
     >> $LOG_FILE 2>&1
 
 apt-get install $APT_OPT \
-    wget \
-    curl \
-    gnupg2 \
-    apt-transport-https \
-    software-properties-common \
     grafana \
     >> $LOG_FILE 2>&1
 

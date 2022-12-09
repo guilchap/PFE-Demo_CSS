@@ -14,8 +14,6 @@ echo "[2] => Install Docker"
 apt-get update
 apt-get install -y \
     ca-certificates \
-    curl \
-    gnupg \
     lsb-release
 
 mkdir -p /etc/apt/keyrings
