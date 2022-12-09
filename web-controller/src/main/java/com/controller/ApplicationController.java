@@ -36,20 +36,23 @@ public class ApplicationController {
 
     @PostMapping("/startRasp")
     public void startScript() throws IOException {
-        System.out.println("test");
         ProcessBuilder pb = new ProcessBuilder();
-        pb.command("sh", "/vagrant/data/some.sh");
-        pb.directory(new File(System.getProperty("user.home")));
-        Process p = pb.start();
-        try (var reader = new BufferedReader(
-                new InputStreamReader(p.getInputStream()))) {
+        try{
+            pb.command("sh", "/vagrant/data/startRasp.sh");
+            pb.directory(new File(System.getProperty("user.home")));
+            Process p = pb.start();
+            try (var reader = new BufferedReader(
+                    new InputStreamReader(p.getInputStream()))) {
 
-            String line;
+                String line;
 
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
+                while ((line = reader.readLine()) != null) {
+                    System.out.println(line);
+                }
+
             }
-
+        }catch (Exception e){
+            System.out.println("Le fichier spécifié est introuvable");
         }
     }
 

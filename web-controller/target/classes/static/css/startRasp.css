@@ -21,11 +21,11 @@ button:active {
     transform: translateY(2px);
 }
 
-.retour {
-    display: block;
-    margin-top: 5%;
-    margin-bottom: 4%;
-}
+/*.retour {*/
+/*    display: block;*/
+/*    margin-top: 5%;*/
+/*    margin-bottom: 4%;*/
+/*}*/
 
 #titre {
     font-weight: bold;

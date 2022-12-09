@@ -28,11 +28,11 @@ button:active {
     transform: translateY(2px);
 }
 
-.retour {
-    display: block;
-    margin-top: 10%;
-    margin-bottom: 4%;
-}
+/*.retour {*/
+/*    display: block;*/
+/*    margin-top: 10%;*/
+/*    margin-bottom: 4%;*/
+/*}*/
 
 .bouton {
     list-style-type: none;
