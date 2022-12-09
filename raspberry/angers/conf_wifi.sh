@@ -14,9 +14,9 @@ echo "START - Configure WiFi"
 echo "Datacenter: "$CITY
 
 echo "=> [1]: Configure interface wlan"
-echo "# interface $INT_NAME_WLAN" >> /etc/dhcpd.conf
-echo "interface $INT_NAME_WLAN" >> /etc/dhcpd.conf
-echo "  static ip_address=$IP_ADDRESS_WLAN" >> /etc/dhcpd.conf
+echo "# interface $INT_NAME_WLAN" >> /etc/dhcpcd.conf
+echo "interface $INT_NAME_WLAN" >> /etc/dhcpcd.conf
+echo "  static ip_address=$IP_ADDRESS_WLAN" >> /etc/dhcpcd.conf
 echo "  static routers=$IP_ROUTER_WLAN" >> /etc/dhcpcd.conf
 
 service dhcpcd restart

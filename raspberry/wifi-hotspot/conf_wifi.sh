@@ -27,11 +27,11 @@ systemctl start NetworkManager.service
 systemctl enable NetworkManager.service
 
 
-echo "=> [2]: Configure interface wlan"
-echo "# interface $INT_NAME" >> /etc/dhcpd.conf
-echo "interface $INT_NAME" >> /etc/dhcpd.conf
-echo "  static ip_address=$IP_ADDRESS" >> /etc/dhcpd.conf
-service dhcpcd restart
+# echo "=> [2]: Configure interface wlan"
+# echo "# interface $INT_NAME" >> /etc/dhcpcd.conf
+# echo "interface $INT_NAME" >> /etc/dhcpcd.conf
+# echo "  static ip_address=$IP_ADDRESS" >> /etc/dhcpcd.conf
+# service dhcpcd restart
 
 
 echo "=> [3]: Configure DHCP"
@@ -42,6 +42,7 @@ echo "dhcp-range=$DHCP_START,$DHCP_END,$DHCP_MASK,$DHCP_LENGTH" >> /etc/dnsmasq.
 
 echo "=> [4]: Configure Hotspot"
 nmcli con add type wifi ifname $INT_NAME con-name $WIFI_NAME autoconnect yes ssid $WIFI_NAME
+nmcli con modify $WIFI_NAME ipv4.addresses 192.168.25.1/24 
 nmcli con modify $WIFI_NAME 802-11-wireless.mode ap 802-11-wireless.band bg ipv4.method shared
 nmcli con modify $WIFI_NAME wifi-sec.key-mgmt wpa-psk
 nmcli con modify $WIFI_NAME wifi-sec.psk "Cl0udC0mputin9PF3"

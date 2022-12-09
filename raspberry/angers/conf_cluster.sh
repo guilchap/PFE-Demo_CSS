@@ -28,9 +28,9 @@ echo '192.168.26.2 cluster-angers'>> /etc/hosts
 echo '192.168.25.3 datacenter-dijon'>> /etc/hosts
 echo '192.168.26.3 cluster-dijon'>> /etc/hosts
 
-echo -e "\n# interface $INT_NAME_ETH0" >> /etc/dhcpd.conf
-echo "interface $INT_NAME_ETH0" >> /etc/dhcpd.conf
-echo "  static ip_address=$IP_ADDRESS_PRIV/24" >> /etc/dhcpd.conf
+echo -e "\n# interface $INT_NAME_ETH0" >> /etc/dhcpcd.conf
+echo "interface $INT_NAME_ETH0" >> /etc/dhcpcd.conf
+echo "  static ip_address=$IP_ADDRESS_PRIV/24" >> /etc/dhcpcd.conf
 service dhcpcd restart
 
 

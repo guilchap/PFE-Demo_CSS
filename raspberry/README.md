@@ -36,16 +36,15 @@ Par la suite les cartes Raspberry seront appelés par leur utilité. Pour les ca
    - Installer git et le configurer
         ```
         sudo apt-get install -y git
-        git config http.sslVerify false
         ```
    - Cloner le repository dans le dossier souhaité
         ```
-        cd /tmp
+        cd /
         sudo git clone --branch datacenter-wifi https://github.com/guilchap/PFE-Demo_CSS.git
         ```
    - Lancer le script de configuration du Wi-Fi
         ```
-        sh /tmp/PFE-Demo_CSS/raspberry/wifi-hotspot/conf_wifi.sh
+        sh /PFE-Demo_CSS/raspberry/wifi-hotspot/conf_wifi.sh
         ```
    - Rédemarrer la machine et débrancher les câbles HDMI et ethernet
         ```
@@ -64,20 +63,19 @@ Par la suite les cartes Raspberry seront appelés par leur utilité. Pour les ca
    - Installer git et le configurer
         ```
         sudo apt-get install -y git
-        git config http.sslVerify false
         ```
    - Cloner le repository dans le dossier souhaité
         ```
-        cd /tmp
+        cd /
         sudo git clone --branch datacenter-wifi https://github.com/guilchap/PFE-Demo_CSS.git
         ```
    - Installer tous les packages requis
         ```
         # Datacenter Dijon
-        sh /tmp/PFE-Demo_CSS/raspberry/dijon/install.sh
+        sh /PFE-Demo_CSS/raspberry/dijon/install.sh
 
         # Datacenter Angers
-        sh /tmp/PFE-Demo_CSS/raspberry/angers/install.sh
+        sh /PFE-Demo_CSS/raspberry/angers/install.sh
         ```
    - Rédemarrer la machine et débrancher les câbles HDMI et ethernet
         ```
@@ -90,7 +88,7 @@ Par la suite les cartes Raspberry seront appelés par leur utilité. Pour les ca
    - Lancer le script de configuration Wi-Fi
         ```
         # Configuration Wi-Fi
-        sh /tmp/PFE-Demo_CSS/raspberry/dijon/conf_wifi.sh
+        sh /PFE-Demo_CSS/raspberry/dijon/conf_wifi.sh
         ```
     - Entrer dans l'interface de configuration pour se connecter au Wi-Fi
         ```
@@ -99,13 +97,13 @@ Par la suite les cartes Raspberry seront appelés par leur utilité. Pour les ca
     - Lancer les scripts de configuration
         ```
         # Configuration cluster
-        sh /tmp/PFE-Demo_CSS/raspberry/dijon/conf_cluster.sh 
+        sh /PFE-Demo_CSS/raspberry/dijon/conf_cluster.sh 
 
         # Configuration cluster
-        sh /tmp/PFE-Demo_CSS/raspberry/dijon/conf_prometheus.sh 
+        sh /PFE-Demo_CSS/raspberry/dijon/conf_prometheus.sh 
 
         # Configuration cluster
-        sh /tmp/PFE-Demo_CSS/raspberry/dijon/conf_apache.sh 
+        sh /PFE-Demo_CSS/raspberry/dijon/conf_apache.sh 
         ```
    - Rédemarrer la machine
         ```
@@ -117,7 +115,7 @@ Par la suite les cartes Raspberry seront appelés par leur utilité. Pour les ca
    - Lancer le script de configuration Wi-Fi
         ```
         # Configuration Wi-Fi
-        sh /tmp/PFE-Demo_CSS/raspberry/dijon/conf_wifi.sh
+        sh /PFE-Demo_CSS/raspberry/dijon/conf_wifi.sh
         ```
     - Entrer dans l'interface de configuration pour se connecter au Wi-Fi
         ```
@@ -126,13 +124,13 @@ Par la suite les cartes Raspberry seront appelés par leur utilité. Pour les ca
     - Lancer les scripts de configuration
         ```
         # Configuration cluster
-        sh /tmp/PFE-Demo_CSS/raspberry/angers/conf_cluster.sh 
+        sh /PFE-Demo_CSS/raspberry/angers/conf_cluster.sh 
 
         # Configuration cluster
-        sh /tmp/PFE-Demo_CSS/raspberry/angers/conf_prometheus.sh 
+        sh /PFE-Demo_CSS/raspberry/angers/conf_prometheus.sh 
 
         # Configuration cluster
-        sh /tmp/PFE-Demo_CSS/raspberry/angers/conf_apache.sh 
+        sh /PFE-Demo_CSS/raspberry/angers/conf_apache.sh 
         ```
    - Rédemarrer la machine
         ```
