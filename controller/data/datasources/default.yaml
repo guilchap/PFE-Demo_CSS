@@ -18,7 +18,7 @@ datasources:
 #   # <int> org id. will default to orgId 1 if not specified
 #   orgId: 1
 #   # <string> url
-   url: http://192.168.4.200:9090
+   url: http://192.168.25.2:9090
 
    uid: 123456789a
 #   # <string> database user, if used
