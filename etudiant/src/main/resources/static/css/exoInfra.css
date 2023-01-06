@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0px;
+}
+
+p.text{
+    margin: 0px;
+    color: white;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+img{
+    display: inline;
+    margin-top: 0;
+}
+
+
+p.foot{
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+
+.header{
+    background-color: #1251a3;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+#logo{
+    width: 50%;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+li{
+    font-size: 25px;
+}
+
+button{
+    font-size: 30px;
+    background-color: #1251a3;
+    color: white;
+    border-radius: 20px;
+    border: #1251a3;
+    padding: 7px 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+div.button{
+    margin: 5%;
+    text-align: center;
+}
+
+.bouton:hover {background-color: hsl(219, 55%, 55%);}
+.bouton:active {
+    background-color: hsl(219, 55%, 55%);
+    transform: translateY(2px);
+  }

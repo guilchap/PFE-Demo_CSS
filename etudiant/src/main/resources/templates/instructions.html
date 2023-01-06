@@ -1,0 +1,127 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+    <head>
+    <meta charset="utf-8">
+    <title>Site Etudiant</title>
+    <link th:href="@{/css/instructions.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <table>
+                <td id="logo">
+                    <img th:src="@{/image/eseo_logo.png}" width="32%">
+                </td>
+                <td>
+                    <p class="text">Journée porte ouverte</p>
+                </td>
+            </table>       
+        </div>
+        <div class="body">
+
+    <h2>Pré-requis:</h2>
+    <p>Lorsque vous rencontrer <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">$Text</span>, cela correspond à une variable, le nom de cette variable explique le champ à remplir. <br/>
+    Les espaces, majuscule etc dans les parties de code sont à respecter.</p>
+    
+    <h2 class="titre"> Exercice d'infrastructure </h2>
+    <p>Dans cette exercice, vous allez découvrir comment, de manière simplifié, implémenter un serveur web.<br/> <br/>
+    Mais tout d'abord, qu'est ce qu'un serveur web? C'est un serveur, une machine, qui va herberger un site web. <br/>
+    Dans le cas de notre exercice, notre serveur web est un serveur linux. Vous devez être habitué à la maison à utiliser Windows. Linux est un autre système d'opération qui nous permet d'être plus libre dans la création d'un serveur personnalisé (il est open source). Contraiement à windows, nous allons travailler dans cet exercice seulement en invite de commande, c'est à dire que nous n'allons pas avoir d'interface graphique.<br/>
+    Sur ce serveur Web, nous avons installé le service Apache qui va nous permettre d'afficher notre page web dans un navigateur internet comme Chrome ou Firefox.</p>
+    
+    <p>Pour que vous puissiez créer votre propre site web herbergé sur votre serveur web, nous vous proposons de réaliser cet exercice.</p>
+    
+     <h2 class="titre">Création et modification du serveur Web</h2>
+     
+     <p>Pour commencer votre exercice, vous allez devoir vous connecter à distance à votre machine. Une connexion à distance se fait à l'aide de la commande `ssh`. Cette commande nous permet une connexion sécurisé à notre machine distante grâce à un utilisateur (login) et un mot de passe. Nous pouvons comparer cette connexion à celle que vous réaliser sur votre ordinateur personnel. Pour vous connecter à votre machine distante, vous allez entrer la commande suivante: <br/><br/>
+     <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">ssh -p $PORTssh etudiant@$IP</span></p>
+     <p> Entrez <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">yes</span> </p>
+     <p>Les variables <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">$PORTssh</span> et <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">$IP</span> vont vous être communiquées au préalable. Vous êtes maintenant connecté à votre machine distante. <br/>
+     Nous allons également vous procurer un port pour vous connecter à votre site web, nous allons l'appeler `$PORTsite`. Il est important de le retenir pour la suite du projet. </p>
+     
+     <h2> - Se mettre en utilisateur suprême</h2>
+     <p>Nous allons par la suite devoir entrer des commandes qui peuvent compromettre le serveur. Pour quand même pouvoir les effectuer, nous devons avoir les droits administrateur, c'est à dire devenir l'utilisateur <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">root</span> ou un autre utilisateur avec les même droits que lui, dans le même groupe par exemple. Pour passer en utilisateur suprême, nous entrons cette commande dans le terminal:<br/><br/>
+     <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">su -</span><br/> <br/> Le mot de passe de l'utilisateur root est :<span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 3px;">network</span><br/><br/>
+     <b>ATTENTION</b> : Le mot de passe de l'utilisateur suprême n'est jamais sensé être connu de tous, nous vous le donnons pour les bienfaits de l'exercice.</p>
+     
+     <h2> - Supprimer la page web existante </h2>
+     
+     <p> Lorsque nous allons nous connecter au site web de votre serveur, même si nous n'avons rien touché, une page web est défini par défaut. Nous pouvons la voir en entrant dans la barre de recherche l'adresse IP de votre machine et son port associer. <br/><br/>
+     <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">$IP:$PORTsite</span><br/><br/>
+    Nous souhaitons créer notre site web, nous allons suppimer cette page web et nous mettrons par la suite notre page personnalisée.</p>
+     
+     <p>La page web se trouve dans le dossier <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">/var/www/html</span> et se nomme <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">index.html</span>. Pour le supprimer, nous allons entrer la commande:<br/><br/>
+     <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;  margin-left: 10px;">rm /var/www/html/index.html</span></p>
+     
+     <h2> - Créer un utilisateur et un groupe</h2>
+     <p>Lors de votre connexion au serveur web, vous allez pouvoir vous créer un utilisateur. Cette utilisateur correspond à votre session. Il est semblable au session de votre ordinateur personnel. Il vous permettra d'avoir votre espace de travail, vos fichiers et dossiers personnels.<br/>
+     Pour créer un utilisateur et un groupe à votre nom, nous entrons dans le terminal la commande suivante:<br/><br/>
+     <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;  margin-left: 10px;">adduser --home /home/$VotreNom $VotreNom</span><br/><br/>
+       => Entrer le mot de passe de votre choix, retenez le!<br/>
+       => Entrer le même mot de passe une deuxième fois<br/>
+       => Les informations ne sont que à titre indicatif, vous n'êtes pas obligé de les remplir, appuyer sur <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;"> entrer</span> pour passer<br/>
+       => Appuyer sur <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;"> y</span> pour valider la création de votre utilisateur et de votre groupe <br/><br/></p>
+     
+     <p>Maintenant que notre utilisateur est créé, nous allons pouvoir continuer l'exercice en tant que cette utilisateur. Nous entrons la commande:<br/><br/>
+        <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">su $VotreNom</span></p>
+     
+     <p>Maintenant, on peut voir que nous sommes connecter avec notre utilisateur. Devant l'espace où vous entrez les commandes, on peut voir:
+        <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">$VotreNom@XXXX:/root$</span><br/>
+     Cela signifie que vous êtes connecté avec votre utilisateur mais que vous vous trouver dans l'espace de travail de l'utilisateur de <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">root</span>.</p>
+     
+     <p>Toutes les actions de création que nous allons faire appartiendront à notre utilisateur.</p>
+     
+      <h2> - Créer un dossier</h2>
+      
+      <p>Nous souhaitons  créer un dossier afin d'y placer notre fichier contenant notre page web. Ce dossier devra se situer dans notre espace de travail.
+      Nous allons devoir nous déplacer vers notre espace de travail. En linux, tout déplacement se fait grâce à la commande <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">cd</span>. Notre espace personnel s'appelle <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">/home/$VotreNom</span>, nous allons donc entrer la commande suivante:<br/><br/>
+      <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cd /home/$VotreNom</span><br/><br/>
+      N'hésitez pas à utiliser l'autocomplétion, c'est à dire d'appuyer sur la touche "tabulation". La machine vous montrera les valeurs possibles pour la commande que vous avez commencé à taper.</p>
+      
+      <p>Maintenant que nous nous situons dans le bon dossier, nous allons en créer un nouveau afin d'y placer notre site web. Pour créer un dossier que nous allons nommer "site_web", nous entrons cette commande:<br/><br/>
+      <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">mkdir site_web</span></p>
+      
+      <p>On peut observer tous les fichiers et dossier présent dans l'espace de travail ou l'on se trouve avec la commande:<br/><br/>
+        <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">ls</span><br/><br/>
+      En effectuant cette commande, nous pouvons observer que notre dossier s'est bien créé.</p>
+    
+    <h2> - Copier un fichier</h2>
+        
+    <p>Nous vous déja pré-préparer un site web. Cependant, vous allez quand même devoir légèrement le modifier afin que ça soit votre page web. Cette page se trouve dans le dossier <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">/home/etudiant/site_web_docker</span> et se nomme <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">index.html</span>. 
+        Elle contient les informations qui vont nous etre afficher à l'écran. Dans se dossier, nous pouvons également voir un fichier qui se nomme <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">index.css</span>. C'est la page de style associer à la page html. Elle va permettre de créer le design de la page. 
+    Avant de modifier notre site web, nous allons d'abord le copier dans notre dossier. Pour ça, nous lançons la commande:<br/><br/>
+    <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cp /home/etudiant/site_web_docker/index.html site_web/index.html</span><br/><br/>
+    Nous devons également copier le fichier de style, nous lançons donc la commande:<br/><br/>
+    <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cp /home/etudiant/site_web_docker/index.css site_web/index.css</span><br/><br/>
+    Maintenant, si nous nous déplaçons dans le dossier <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">site_web</span> et que nous observons tous les fichiers présents, nous pouvons voir nos deux fichiers qui va créer notre page web.<br/><br/>
+    <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cd site_web</span><br/><br/>
+    <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">ls</span><br/><br/></p>
+    
+    <h2> - Modifier notre site web</h2>
+    
+    <p>Nous allons modifier le site web afin qu'il vous soit personnalisé. Pour ça, nous allons modifier le fichier <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">index.html</span>. Entrez la commande:<br/><br/>
+        <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">nano index.html</span></p>
+    
+    <p>Une fois que vous vous trouvez dans le fichier, vous allez vous trouver face à un grand nombre d'information. La plupart sont la syntaxe du fichier <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">.html</span>. Nous n'allons pas nous en préoccuper. Vous allez voir deux lignes d'étoiles avec un texte entre. Suivez l'instruction (écrivez votre prénom sous les lignes d'étoiles mais avant la ligne <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;"> < /h1 >< /div ></span>.
+    Une fois cela fait, vous pouvez quitter le fichier en appuyant sur les touches <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; ">ctrl</span> et <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; ">X</span> en même temps et appuyer sur la touche <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; ">Y</span> pour valider vos modifications.</p>
+    
+    <h2> - Afficher la page web dans notre navigateur</h2>
+    
+    <p>Une fois que nos fichiers sont modifiés à notre convenance, nous allons les afficher dans notre navigateur. Comme nous l'avons expliqué ci-dessus, pour que nous puissions afficher une page web dans le navigateur, elle doit se trouver dans le dossier <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">/var/www/html</span>. Nous allons donc copier les deux fichiers qui composent notre page web dans ce dossier.<br/><br/>
+    <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cp index.html /var/www/html/index.html</span><br/><br/>
+    <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cp index.css /var/www/html/index.css</span><br/></p>
+    
+    <p>Nous allons rafraichir la page dans notre navigateur qui était à l'adresse : <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">$IP:$PORTsite</span></p>
+    
+    <p>Vous observer votre page web?</p>
+    <h2 class="titre">BRAVO, vous avez réussi!</h2>
+<div class="button">
+    <a th:href="@{/infra}">
+        <button class="button">Retour</button>
+    </a>
+</div>
+</div>
+</body>
+
+<p class="foot"><span class="pfe">PFE 2022-2023 </span>-<span class="noms"> APIOU Elodie, CAMILLERI Dorian, CHAPUT Guillaume</span>
+</p>
+</html>

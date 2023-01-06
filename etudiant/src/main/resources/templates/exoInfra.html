@@ -1,0 +1,37 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+    <head>
+    <meta charset="utf-8">
+    <title>Site Etudiant</title>
+    <link th:href="@{/css/exoInfra.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <table>
+                <td id="logo">
+                    <img th:src="@{/image/eseo_logo.png}" width="32%">
+                </td>
+                <td>
+                    <p class="text">Journée porte ouverte</p>
+                </td>
+            </table>       
+        </div>
+        <div class="body">
+            <h1>Prêt à commencer l'exercice?</h1>
+            <ul><li> Appuyer sur "lancer un conteneur" pour commencer l'exercice puis appuyer sur "voir les instructions".</li>
+            <li>Retenez les informations concernant votre adresse IP et vos ports.</li></ul>
+            <div class="button">
+                <button class="bouton">Lancer un conteneur</button>
+                <a th:href="@{/doc}">
+                    <button class="button">Voir les instructions</button>
+                </a>
+                <a th:href="@{/}">
+                    <button class="button">Retour</button>
+                </a>
+            </div>
+        </div>
+    </body>
+
+    <p class="foot"><span class="pfe">PFE 2022-2023 </span>-<span class="noms"> APIOU Elodie, CAMILLERI Dorian, CHAPUT Guillaume</span>
+    </p>
+</html>
