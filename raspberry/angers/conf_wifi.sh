@@ -5,7 +5,7 @@ LOG_FILE_WIFI="/var/log/datacenter/conf_wifi.log"
 CITY="Angers"
 
 INT_NAME_WLAN="wlan0"
-IP_ADDRESS_WLAN="192.168.25.2/24"
+IP_ADDRESS_WLAN="192.168.25.2"
 IP_ROUTER_WLAN="192.168.25.1"
 
 
@@ -16,7 +16,7 @@ echo "Datacenter: "$CITY
 echo "=> [1]: Configure interface wlan"
 echo "# interface $INT_NAME_WLAN" >> /etc/dhcpcd.conf
 echo "interface $INT_NAME_WLAN" >> /etc/dhcpcd.conf
-echo "  static ip_address=$IP_ADDRESS_WLAN" >> /etc/dhcpcd.conf
+echo "  static ip_address=$IP_ADDRESS_WLAN/24" >> /etc/dhcpcd.conf
 echo "  static routers=$IP_ROUTER_WLAN" >> /etc/dhcpcd.conf
 
 service dhcpcd restart
