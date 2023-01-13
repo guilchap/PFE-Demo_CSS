@@ -39,7 +39,7 @@ echo "=> [4]: Configure cluster"
 echo -e "password\npassword" | passwd hacluster
 
 echo "=> [5]: Configure system"
-sed -i 's/exit 0/sleep 30\nsystemctl start corosync\nsleep 30\nsystemctl start pacemaker\nexit 0/g' /etc/rc.local
+sed '15,$ s/exit 0/sleep 15\nsystemctl start corosync\nsleep 10\nexit 0/g' -i /etc/rc.local
 
 
 echo

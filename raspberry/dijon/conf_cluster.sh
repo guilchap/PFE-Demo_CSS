@@ -51,11 +51,13 @@ pcs resource create VirtualIP IPaddr2 ip=$IP_ADDRESS_VIRT cidr_netmask=24
 pcs resource create HAProxy systemd:haproxy
 
 pcs constraint colocation add VirtualIP with HAProxy score=INFINITY
+pcs resource defaults update resource-stickiness=100
 
 systemctl restart haproxy
 
 echo "=> [5]: Configure system"
-sed -i 's/exit 0/sleep 30\nsystemctl start corosync\nsleep 30\nsystemctl start pacemaker\nexit 0/g' /etc/rc.local
+sed '15,$ s/exit 0/sleep 15\nsystemctl start corosync\nsleep 10\nexit 0/g' -i /etc/rc.local
+
 
 echo
 echo "END - Configure Cluster"

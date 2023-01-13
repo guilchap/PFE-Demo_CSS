@@ -7,20 +7,20 @@ CITY="Dijon"
 echo "---------------------"
 echo "START - Configure Web"
 
-echo "=> [1]: Delete access of default site"
-sed -i '/DocumentRoot/ s/^/#/' /etc/apache2/sites-available/000-default.conf
+echo "=> [1]: Delete default site"
+a2dissite 000-default
 
 echo "=> [2]: Add new site"
 echo '192.168.25.4 web.css.eseo'>> /etc/hosts
-mkdir /var/www/html/web.css.eseo/
-cp -R PFE-Demo_CSS/raspberry/data/site-html/$CITY/* /var/www/html/web.css.eseo
-cp PFE-Demo_CSS/raspberry/data/site-html/web.css.eseo.conf /etc/apache2/sites-available/
+mkdir /var/www/web.css.eseo/
+cp -R $(pwd)/data/site-html/$CITY/* /var/www/web.css.eseo
+cp $(pwd)/data/site-html/web.css.eseo.conf /etc/apache2/sites-available/
 
 echo "=> [3]: Activate new site"
 a2ensite web.css.eseo.conf
 
 echo "=> [3]: Restart service"
-service apache2 restart
+systemctl reload apache2
 
 
 echo
