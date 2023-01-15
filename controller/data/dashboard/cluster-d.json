@@ -74,7 +74,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "123456789a"
+          "uid": "123456789d"
         },
         "fieldConfig": {
           "defaults": {
@@ -148,7 +148,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"X\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -159,7 +159,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"apps.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -171,7 +171,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"audio\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -183,7 +183,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"auth\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -195,7 +195,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"charts.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -207,7 +207,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"cron\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -219,7 +219,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"dns\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -231,7 +231,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"ebpf.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -243,7 +243,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"gnome\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -255,7 +255,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"go.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -267,7 +267,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"gui\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -279,7 +279,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"kernel\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -291,7 +291,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"khugepaged\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -303,7 +303,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"ksmd\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -315,7 +315,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"logs\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -327,7 +327,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"modem\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -339,7 +339,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"mua\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -351,7 +351,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"netdata\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -363,7 +363,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"netmanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -375,7 +375,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"nfacct.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -387,7 +387,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"other\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -399,7 +399,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"packagemanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -411,7 +411,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"print\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -423,7 +423,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"python.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -435,7 +435,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"system\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -447,7 +447,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"tc-qos-helper\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -459,7 +459,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"time\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -471,7 +471,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"timedb\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -483,7 +483,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"webbrowser\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -495,7 +495,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"wifi\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -555,7 +555,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "123456789a"
+          "uid": "123456789d"
         },
         "fieldConfig": {
           "defaults": {
@@ -606,7 +606,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -623,7 +623,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "123456789a"
+          "uid": "123456789d"
         },
         "fieldConfig": {
           "defaults": {
@@ -702,7 +702,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"X\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -714,7 +714,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"apps.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -726,7 +726,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"audio\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -738,7 +738,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"auth\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -750,7 +750,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"charts.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -762,7 +762,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"cron\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -774,7 +774,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"dns\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -786,7 +786,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"ebpf.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -798,7 +798,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"gnome\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -810,7 +810,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"go.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -822,7 +822,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"gui\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -834,7 +834,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"kernel\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -846,7 +846,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"khugepaged\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -858,7 +858,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"ksmd\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -870,7 +870,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"logs\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -882,7 +882,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"modem\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -894,7 +894,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"mua\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -906,7 +906,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"netdata\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -918,7 +918,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"netmanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -930,7 +930,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"nfacct.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -942,7 +942,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"other\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -954,7 +954,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"packagemanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -966,7 +966,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"print\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -978,7 +978,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"python.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -990,7 +990,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"system\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -1002,7 +1002,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"tc-qos-helper\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -1014,7 +1014,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"time\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -1026,7 +1026,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"timedb\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -1038,7 +1038,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"webbrowser\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
@@ -1050,7 +1050,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"wifi\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -1111,7 +1111,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "123456789a"
+          "uid": "123456789d"
         },
         "fieldConfig": {
           "defaults": {
@@ -1162,7 +1162,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "123456789a"
+              "uid": "123456789d"
             },
             "editorMode": "code",
             "expr": "netdata_system_uptime_seconds_average{chart=\"system.uptime\", dimension=\"uptime\", family=\"uptime\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
@@ -1193,8 +1193,8 @@
       ]
     },
     "timezone": "",
-    "title": "System monitoring",
-    "uid": "tDT3jvV4z",
+    "title": "System monitoring Dijon",
+    "uid": "smd253",
     "version": 8,
     "weekStart": ""
   }
