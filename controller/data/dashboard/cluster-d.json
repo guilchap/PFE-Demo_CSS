@@ -1,1200 +1,222 @@
 {
-    "__inputs": [
+  "annotations": {
+    "list": [
       {
-        "name": "DS_PROMETHEUS",
-        "label": "Prometheus",
-        "description": "",
-        "type": "datasource",
-        "pluginId": "prometheus",
-        "pluginName": "Prometheus"
-      }
-    ],
-    "__elements": {},
-    "__requires": [
-      {
-        "type": "panel",
-        "id": "gauge",
-        "name": "Gauge",
-        "version": ""
-      },
-      {
-        "type": "grafana",
-        "id": "grafana",
-        "name": "Grafana",
-        "version": "9.1.7"
-      },
-      {
-        "type": "datasource",
-        "id": "prometheus",
-        "name": "Prometheus",
-        "version": "1.0.0"
-      },
-      {
-        "type": "panel",
-        "id": "stat",
-        "name": "Stat",
-        "version": ""
-      },
-      {
-        "type": "panel",
-        "id": "timeseries",
-        "name": "Time series",
-        "version": ""
-      }
-    ],
-    "annotations": {
-      "list": [
-        {
-          "builtIn": 1,
-          "datasource": {
-            "type": "grafana",
-            "uid": "-- Grafana --"
-          },
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "target": {
-            "limit": 100,
-            "matchAny": false,
-            "tags": [],
-            "type": "dashboard"
-          },
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
           "type": "dashboard"
-        }
-      ]
-    },
-    "editable": true,
-    "fiscalYearStartMonth": 0,
-    "graphTooltip": 0,
-    "id": null,
-    "links": [],
-    "liveNow": false,
-    "panels": [
-      {
-        "datasource": {
-          "type": "prometheus",
-          "uid": "123456789d"
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "continuous-BlYlRd"
-            },
-            "custom": {
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "lineInterpolation": "linear",
-              "lineWidth": 2,
-              "pointSize": 1,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "blue",
-                  "value": null
-                }
-              ]
-            },
-            "unit": "Kbits"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 0
-        },
-        "id": 8,
-        "options": {
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "targets": [
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"X\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "A"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"apps.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "B"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"audio\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "C"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"auth\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "D"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"charts.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "E"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"cron\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "F"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"dns\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "G"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"ebpf.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "H"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"gnome\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "I"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"go.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "J"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"gui\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "K"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"kernel\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "L"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"khugepaged\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "M"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"ksmd\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "N"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"logs\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "O"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"modem\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "P"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"mua\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "Q"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"netdata\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "R"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"netmanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "S"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"nfacct.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "T"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"other\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "U"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"packagemanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "V"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"print\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "W"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"python.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "X"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"system\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "Y"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"tc-qos-helper\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "Z"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"time\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "AA"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"timedb\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "AB"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"webbrowser\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "AC"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_recv_kilobits_persec_average{chart=\"apps.total_bandwidth_recv\", dimension=\"wifi\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "AD"
-          }
-        ],
-        "title": "Data recieved",
-        "transformations": [
-          {
-            "id": "calculateField",
-            "options": {
-              "mode": "reduceRow",
-              "reduce": {
-                "include": [
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"X\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"apps.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"audio\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"auth\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"charts.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"cron\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"dns\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"ebpf.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"gnome\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"go.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"gui\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"kernel\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"khugepaged\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"ksmd\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"logs\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"modem\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"mua\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"netdata\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"netmanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"nfacct.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"other\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"packagemanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"print\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"python.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"system\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"tc-qos-helper\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"time\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"timedb\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"webbrowser\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_recv_kilobits_persec_average\", chart=\"apps.total_bandwidth_recv\", dimension=\"wifi\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}"
-                ],
-                "reducer": "sum"
-              },
-              "replaceFields": true
-            }
-          }
-        ],
-        "type": "timeseries"
-      },
-      {
-        "datasource": {
-          "type": "prometheus",
-          "uid": "123456789d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "decimals": 2,
-            "mappings": [],
-            "max": 100,
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "percent"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 0
-        },
-        "id": 4,
-        "options": {
-          "orientation": "auto",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showThresholdLabels": false,
-          "showThresholdMarkers": true
-        },
-        "pluginVersion": "9.1.7",
-        "targets": [
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "exemplar": false,
-            "expr": "netdata_cpu_cpu_percentage_average{chart=\"cpu.cpu0\", dimension=\"user\", family=\"utilization\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "instant": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "A"
-          }
-        ],
-        "title": "CPU load",
-        "type": "gauge"
-      },
-      {
-        "datasource": {
-          "type": "prometheus",
-          "uid": "123456789d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "continuous-RdYlGr"
-            },
-            "custom": {
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "lineInterpolation": "linear",
-              "lineWidth": 2,
-              "pointSize": 1,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "Kbits"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 8
-        },
-        "id": 6,
-        "options": {
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "9.1.6",
-        "targets": [
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"X\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "B"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"apps.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "C"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"audio\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "D"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"auth\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "E"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"charts.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "F"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"cron\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "G"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"dns\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "H"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"ebpf.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "I"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"gnome\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "J"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"go.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "K"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"gui\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "L"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"kernel\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "M"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"khugepaged\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "N"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"ksmd\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "O"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"logs\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "P"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"modem\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "Q"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"mua\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "R"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"netdata\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "S"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"netmanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "T"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"nfacct.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "U"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"other\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "V"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"packagemanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "W"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"print\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "X"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"python.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "Y"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"system\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "Z"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"tc-qos-helper\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "AA"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"time\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "AB"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"timedb\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "A"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"webbrowser\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}\n",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "AC"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_apps_total_bandwidth_sent_kilobits_persec_average{chart=\"apps.total_bandwidth_sent\", dimension=\"wifi\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "AD"
-          }
-        ],
-        "title": "Data sent",
-        "transformations": [
-          {
-            "id": "calculateField",
-            "options": {
-              "alias": "Totale_Down",
-              "mode": "reduceRow",
-              "reduce": {
-                "include": [
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"X\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"apps.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"audio\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"auth\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"charts.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"cron\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"dns\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"ebpf.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"gnome\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"go.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"gui\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"kernel\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"khugepaged\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"ksmd\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"logs\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"modem\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"mua\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"netdata\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"netmanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"nfacct.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"other\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"packagemanager\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"print\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"python.d.plugin\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"system\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"tc-qos-helper\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"time\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"timedb\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"webbrowser\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-                  "{__name__=\"netdata_apps_total_bandwidth_sent_kilobits_persec_average\", chart=\"apps.total_bandwidth_sent\", dimension=\"wifi\", family=\"net\", instance=\"localhost:19999\", job=\"netdata-scrape\"}"
-                ],
-                "reducer": "sum"
-              },
-              "replaceFields": true
-            }
-          }
-        ],
-        "type": "timeseries"
-      },
-      {
-        "datasource": {
-          "type": "prometheus",
-          "uid": "123456789d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "s"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 8
-        },
-        "id": 2,
-        "options": {
-          "colorMode": "value",
-          "graphMode": "area",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "textMode": "auto"
-        },
-        "pluginVersion": "9.1.7",
-        "targets": [
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "123456789d"
-            },
-            "editorMode": "code",
-            "expr": "netdata_system_uptime_seconds_average{chart=\"system.uptime\", dimension=\"uptime\", family=\"uptime\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "A"
-          }
-        ],
-        "title": "System uptime",
-        "type": "stat"
+        "type": "dashboard"
       }
-    ],
-    "refresh": "1s",
-    "schemaVersion": 37,
-    "style": "dark",
-    "tags": [],
-    "templating": {
-      "list": []
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "123456789d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "green",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "123456789d"
+          },
+          "editorMode": "code",
+          "expr": "netdata_system_uptime_seconds_average{chart=\"system.uptime\", dimension=\"uptime\", family=\"uptime\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "System uptime",
+      "type": "stat"
     },
-    "time": {
-      "from": "now-5m",
-      "to": "now"
-    },
-    "timepicker": {
-      "refresh_intervals": [
-        "1s",
-        "5s"
-      ]
-    },
-    "timezone": "",
-    "title": "System monitoring Dijon",
-    "uid": "smd253",
-    "version": 8,
-    "weekStart": ""
-  }
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "123456789d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "green",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisGridShow": true,
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "axisSoftMax": 5,
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "scheme",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 2,
+          "mappings": [],
+          "min": 0,
+          "noValue": "Datacenter OFF",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 3
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "123456789d"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "netdata_cpu_cpu_percentage_average{chart=\"cpu.cpu0\", dimension=\"user\", family=\"utilization\", instance=\"localhost:19999\", job=\"netdata-scrape\"}",
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "CPU load",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "1s",
+  "schemaVersion": 37,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "1s",
+      "5s"
+    ]
+  },
+  "timezone": "",
+  "title": "System monitoring Dijon 2",
+  "uid": "smd253new",
+  "version": 5,
+  "weekStart": ""
+}
