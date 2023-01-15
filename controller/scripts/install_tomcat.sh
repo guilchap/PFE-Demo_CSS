@@ -8,14 +8,9 @@ LOG_FILE="/vagrant/logs/install_tomcat.log"
 echo "----------------------"
 echo "START - install Tomcat"
 
-echo "=> [1]: Installing required packages..."
-apt-get install $APT_OPT \
-    default-jdk \
-    ufw \
-    >> $LOG_FILE 2>&1
-
 echo "=> [2]: Add new user"
 useradd -r -m -U -d /opt/tomcat -s /bin/false tomcat
+usermod --gid docker tomcat
 
 echo "=> [3]: Download and extract Tomcat"
 wget -O /tmp/tomcat.tar.gz -c https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz \
@@ -41,10 +36,10 @@ systemctl enable tomcat
 echo "=> [7]: Port management"
 ufw allow 8080/tcp
 
-cat <<EOF
-Service installed at http://$IP:8080/
+# cat <<EOF
+# Service installed at http://$IP:8080/
 
-New pages accessible at http://$IP:8080/pfe-demo-css/
-EOF
+# New pages accessible at http://$IP:8080/pfe-demo-css/
+# EOF
 echo "END - Install Tomcat"
 echo
