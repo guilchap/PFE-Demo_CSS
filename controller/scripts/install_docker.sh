@@ -29,3 +29,6 @@ chmod a+r /etc/apt/keyrings/docker.gpg
 apt-get update
 
 apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+echo "[3] => Construction de l'image"
+docker build --no-cache -t infra /vagrant/data/
