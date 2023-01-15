@@ -30,7 +30,8 @@ mkdir /var/lib/grafana/dashboards
 cp /vagrant/data/grafana.ini /etc/grafana
 cp /vagrant/data/datasources/default.yaml /usr/share/grafana/conf/provisioning/datasources
 cp /vagrant/data/dashboard/default.yaml /usr/share/grafana/conf/provisioning/dashboards
-cp /vagrant/data/dashboard/cluster.json /var/lib/grafana/dashboards
+cp /vagrant/data/dashboard/cluster-a.json /var/lib/grafana/dashboards
+cp /vagrant/data/dashboard/cluster-d.json /var/lib/grafana/dashboards
 
 echo "=> [4]: Start Grafana service"
 systemctl start grafana-server
