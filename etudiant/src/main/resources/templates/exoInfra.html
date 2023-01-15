@@ -21,7 +21,9 @@
             <ul><li> Appuyer sur "lancer un conteneur" pour commencer l'exercice puis appuyer sur "voir les instructions".</li>
             <li>Retenez les informations concernant votre adresse IP et vos ports.</li></ul>
             <div class="button">
-                <button class="bouton">Lancer un conteneur</button>
+                <a th:href="@{/infoDocker}">
+                    <button class="bouton">Lancer un conteneur</button>
+                </a>
                 <a th:href="@{/doc}">
                     <button class="button">Voir les instructions</button>
                 </a>
