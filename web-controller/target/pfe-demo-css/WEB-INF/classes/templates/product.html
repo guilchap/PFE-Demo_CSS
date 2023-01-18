@@ -40,12 +40,44 @@
             </p>
         </ul>
         <p class="image">
-            <img id="demoInfra" th:src="@{image/Démo Infra3.jpg}" alt="Démo_Infrastructure">
+            <img id="demoInfraRasp" th:src="@{image/Démo Infra3.jpg}" alt="Démo_Infrastructure">
+        </p>
+        <br>
+        <h1>Exercice d'infrastructure Linux</h1>
+        <p class="description">Le principe est que les elèves découvrent le métier d'administrateur système en effectuant des commandes simples sur un environnement linux.
+        <ul>
+            <li>
+                <p class="description">La conteneurisation avec Docker
+            </li>
+            <p class="description">
+                Chaque elève aura en sa possesion un conteneur docker de type debian qui fera office de serveur.
+                Sur ce conteneur, il pourra réaliser des commandes simples afin d'expérimenter le métier d'administrateur système.
+                Il pourra également implémenter son propre site internet. Travailler sur un conteneur docker et non une machine virtuelle
+                permet la destruction et la construction quasi instantanée de l'espace de travail des étudiants. C'est également beaucoup
+                plus léger en terme de place.
+            </p>
+            <li>
+                <p class="description">VM controleur
+            </li>
+            <p class="description">
+                Elle heberge le site administrateur qui va permettre de controler l'exercice d'infrastructure. Les administrateurs pourront
+                créer l'image docker à partir de Dockerfile présent dans les fichiers de la VM. Ils pourront également en fin de journée
+                détruire tous les conteneurs afin de libérer de l'espace sur la VM.
+                La VM controleur héberge également un site web étudiant. Il va permettre aux étudiants de travailler en autonomie.
+                Ils auront à leur disposition sur le site des instructions sur comment réaliser l'exercice et pourquoi il le réalise.
+                Ils pourront aussi construire leur conteneur docker en appuyant sur un bouton et accéder aux informations concernant leur
+                conteneur. Créer un site dédié aux étudiants leur permet une plus grande autonomie dans leur travail mais également d'avancer
+                à leur rythme.
+            </p>
+        </ul>
+        <p class="image">
+            <img id="demoInfra" th:src="@{image/Exercice Linux Shell1.jpg}" alt="Exercice infrastructure">
+        </p>
         </p>
     </div>
     <h3>Arrive très bientot ...</h3>
     <a th:href="@{/}">
-        <button class="bouton">Retour</button>
+        <button class="bouton" type="submit">Retour</button>
     </a>
     <p></p>
     <!-- <h2>Exercice d'infrastructure Linux</h2>

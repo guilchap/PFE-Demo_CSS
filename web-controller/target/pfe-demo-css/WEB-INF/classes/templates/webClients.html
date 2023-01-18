@@ -7,31 +7,61 @@
     <link rel="icon" type="image/x-icon" th:href="@{/image/logo_PFE.png}">
 </head>
 <body>
-<div>
-    <div th:replace="header/header"></div>
-</div>
-<p id="titre">Que voulez-vous faire ?</p>
-<ul class="bouton">
-    <li>
-        <!-- Lance script pour création des docker -->
-        <button>Site web Docker 1</button>
-    </li>
-    <li>
-        <!-- Lance script pour destruction des docker -->
-        <button>Site web Docker 2</button>
-    </li>
-    <li>
-        <!-- faire un href sur la page modifiée dans les fichiers du docker -->
-<!--        <a th:href="@{/grafana}">-->
-            <button>Site web Docker 3</button>
-<!--        </a>-->
-    </li>
-</ul>
-<a th:href="@{/infra}">
-    <button class="retour" type="submit">Retour</button>
-</a>
-<div>
-    <div th:replace="footer/footer"></div>
-</div>
+    <div>
+        <div th:replace="header/header"></div>
+    </div>
+
+    <p id="titre">Liste des conteneurs Docker</p>
+
+    <table id="tableDocker" class="table">
+        <thead class="head">
+        <tr class="row">
+            <th class="titre">ID DU CONTENEUR</th>
+            <th class="titre">IMAGE</th>
+            <th class="titre">COMMANDE</th>
+            <th class="titre">CRÉÉ</th>
+            <th class="titre">STATUT</th>
+            <th class="titre">PORTS</th>
+            <th class="titre">NOMS</th>
+        </tr>
+        </thead>
+        <tbody id="allDockerList">
+        <tr class="row" th:if="${outputList.isEmpty()}">
+            <td style="text-align: left">Aucun conteneur n'est construit</td>
+        </tr>
+
+        <tr class="row" th:each="out : ${outputList}">
+            <td class="contenu" th:text="${out.get(0)}"></td>
+            <td class="contenu" th:text="${out.get(1)}"></td>
+            <td class="contenu" th:text="${out.get(2)}"></td>
+            <td class="contenu" th:text="${out.get(3)}"></td>
+            <td class="contenu" th:text="${out.get(4)}"></td>
+            <td class="contenu" th:text="${out.get(5)}"></td>
+            <td class="contenu" th:text="${out.get(6)}"></td>
+        </tr>
+        </tbody>
+    </table>
+<!--    <ul class="bouton">-->
+<!--        <li>-->
+<!--            &lt;!&ndash; Lance script pour création des docker &ndash;&gt;-->
+<!--            <button>Site web Docker 1</button>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            &lt;!&ndash; Lance script pour destruction des docker &ndash;&gt;-->
+<!--            <button>Site web Docker 2</button>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            &lt;!&ndash; faire un href sur la page modifiée dans les fichiers du docker &ndash;&gt;-->
+<!--    &lt;!&ndash;        <a th:href="@{/grafana}">&ndash;&gt;-->
+<!--                <button>Site web Docker 3</button>-->
+<!--    &lt;!&ndash;        </a>&ndash;&gt;-->
+<!--        </li>-->
+<!--    </ul>-->
+    <a th:href="@{/infra}" style="position: fixed; bottom: 1%;">
+        <button class="retour" type="submit">Retour</button>
+    </a>
+    <div>
+        <div th:replace="footer/footer"></div>
+    </div>
 </body>
 </html>
