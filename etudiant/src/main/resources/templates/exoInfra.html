@@ -16,17 +16,38 @@
                 </td>
             </table>       
         </div>
+        <div th:if="${result == 'failure'}">
+            <div class="alert">
+                <span class="closebtn">&times;</span>
+                <strong>Attention !</strong> Une erreur s'est produite.
+            </div>
+        </div>
+        <div th:if="${result == 'success'}">
+            <div class="alert success">
+                <span class="closebtn">&times;</span>
+                <strong>Réussite !</strong> Les informations pour éxecuter la démonstration sont les suivantes :
+                Adresse IP : 192.168.25.5,
+                Port SSH : <span th:text="${pssh}"/>,
+                Port http : <span th:text="${phttp}"/>
+            </div>
+        </div>
         <div class="body">
             <h1>Prêt à commencer l'exercice?</h1>
-            <ul><li> Appuyer sur "lancer un conteneur" pour commencer l'exercice puis appuyer sur "voir les instructions".</li>
+            <ul class="instru"><li> Appuyer sur "lancer un conteneur" pour commencer l'exercice puis appuyer sur "voir les instructions".</li>
             <li>Retenez les informations concernant votre adresse IP et vos ports.</li></ul>
-            <div class="button">
-                <a th:href="@{/infoDocker}">
-                    <button class="bouton">Lancer un conteneur</button>
-                </a>
-                <a th:href="@{/doc}">
-                    <button class="button">Voir les instructions</button>
-                </a>
+            <div class="boutons">
+                <ul class="bouton">
+                    <li>
+                        <form method="post">
+                            <button class="button" type="submit">Lancer un conteneur</button>
+                        </form>
+                    </li>
+                    <li>
+                        <a th:href="@{/doc}">
+                            <button class="button">Voir les instructions</button>
+                        </a>
+                    </li>
+                </ul>
                 <a th:href="@{/}">
                     <button class="button">Retour</button>
                 </a>
@@ -36,4 +57,16 @@
 
     <p class="foot"><span class="pfe">PFE 2022-2023 </span>-<span class="noms"> APIOU Elodie, CAMILLERI Dorian, CHAPUT Guillaume</span>
     </p>
+    <script>
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function(){
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function(){ div.style.display = "none"; }, 600);
+            }
+        }
+    </script>
 </html>
