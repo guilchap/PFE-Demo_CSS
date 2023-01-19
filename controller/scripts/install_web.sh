@@ -30,10 +30,20 @@ apt-get install $APT_OPT \
   php-mbstring \
   >> $LOG_FILE 2>&1
 
-echo "=> [2]: Apache2 configuration"
-	# Add configuration of /etc/apache2
+echo "=> [2]: Active modules"
+a2enmod proxy_ajp
+a2enmod proxy_http
 
-echo "=> [3]: Redémarrage du service"
+echo "=> [3]: Configuration du proxy"
+cat <<EOF >> /etc/apache2/apache2.conf
+ProxyPass / http://127.0.0.1:8080/
+ProxyPassReverse / http://127.0.0.1:8080/
+ProxyPass /admin/ http://127.0.0.1:8080/admin/
+ProxyPassReverse /admin/ http://127.0.0.1:8080/admin/
+
+EOF
+
+echo "=> [4]: Redémarrage du service"
 service apache2 reload
 
 echo "END - install web Server"
