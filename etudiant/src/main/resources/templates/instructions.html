@@ -73,7 +73,7 @@
      
       <h2> - Créer un dossier</h2>
       
-      <p>Nous souhaitons  créer un dossier afin d'y placer notre fichier contenant notre page web. Ce dossier devra se situer dans notre espace de travail.
+      <p>Nous souhaitons créer un dossier afin d'y placer notre fichier contenant notre page web. Ce dossier devra se situer dans notre espace de travail.
       Nous allons devoir nous déplacer vers notre espace de travail. En linux, tout déplacement se fait grâce à la commande <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">cd</span>. Notre espace personnel s'appelle <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">/home/$VotreNom</span>, nous allons donc entrer la commande suivante:<br/><br/>
       <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cd /home/$VotreNom</span><br/><br/>
       N'hésitez pas à utiliser l'autocomplétion, c'est à dire d'appuyer sur la touche "tabulation". La machine vous montrera les valeurs possibles pour la commande que vous avez commencé à taper.</p>
@@ -109,8 +109,8 @@
     
     <p>Une fois que nos fichiers sont modifiés à notre convenance, nous allons les afficher dans notre navigateur. Comme nous l'avons expliqué ci-dessus, pour que nous puissions afficher une page web dans le navigateur, elle doit se trouver dans le dossier <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">/var/www/html</span>. Nous allons donc d'abords changer d'utilisateur et enfin copier les deux fichiers qui composent notre page web dans ce dossier.<br/><br/>
         <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">su -</span><br/><br/>
-    <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cp index.html /var/www/html/index.html</span><br/><br/>
-    <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cp index.css /var/www/html/index.css</span><br/></p>
+    <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cp /home/$VotreNom/site_web/index.html /var/www/html/index.html</span><br/><br/>
+    <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cp /home/$VotreNom/site_web/index.css /var/www/html/index.css</span><br/></p>
     
     <p>Nous allons rafraichir la page dans notre navigateur qui était à l'adresse : <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">$IP:$PORTsite</span></p>
     
