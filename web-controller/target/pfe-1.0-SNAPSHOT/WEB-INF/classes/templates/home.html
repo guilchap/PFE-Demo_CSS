@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/home.css}" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+    <div>
+        <div th:replace="header/header"></div>
+    </div>
+    <div>
+        <p id="titre">Quel exercice voulez-vous faire ?</p>
+        <ul class="bouton">
+            <li>
+                <a th:href="@{/demo}">
+                    <button type="submit">Démo Infrastructure</button>
+                </a>
+            </li>
+            <li>
+                <button>Exercice Infrastructure</button>
+            </li>
+            <li>
+                <button>Exercice Sécurité</button>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div th:replace="footer/footer"></div>
+    </div>
+</body>
+</html>

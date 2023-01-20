@@ -35,6 +35,7 @@
      <p>Pour commencer votre exercice, vous allez devoir vous connecter à distance à votre machine. Une connexion à distance se fait à l'aide de la commande `ssh`. Cette commande nous permet une connexion sécurisé à notre machine distante grâce à un utilisateur (login) et un mot de passe. Nous pouvons comparer cette connexion à celle que vous réaliser sur votre ordinateur personnel. Pour vous connecter à votre machine distante, vous allez entrer la commande suivante: <br/><br/>
      <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">ssh -p $PORTssh etudiant@$IP</span></p>
      <p> Entrez <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">yes</span> </p>
+            <p>Le mot de passe pour se connecter est :<span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 3px;">network</span></p>
      <p>Les variables <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">$PORTssh</span> et <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">$IP</span> vont vous être communiquées au préalable. Vous êtes maintenant connecté à votre machine distante. <br/>
      Nous allons également vous procurer un port pour vous connecter à votre site web, nous allons l'appeler `$PORTsite`. Il est important de le retenir pour la suite du projet. </p>
      
@@ -106,7 +107,8 @@
     
     <h2> - Afficher la page web dans notre navigateur</h2>
     
-    <p>Une fois que nos fichiers sont modifiés à notre convenance, nous allons les afficher dans notre navigateur. Comme nous l'avons expliqué ci-dessus, pour que nous puissions afficher une page web dans le navigateur, elle doit se trouver dans le dossier <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">/var/www/html</span>. Nous allons donc copier les deux fichiers qui composent notre page web dans ce dossier.<br/><br/>
+    <p>Une fois que nos fichiers sont modifiés à notre convenance, nous allons les afficher dans notre navigateur. Comme nous l'avons expliqué ci-dessus, pour que nous puissions afficher une page web dans le navigateur, elle doit se trouver dans le dossier <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px;">/var/www/html</span>. Nous allons donc d'abords changer d'utilisateur et enfin copier les deux fichiers qui composent notre page web dans ce dossier.<br/><br/>
+        <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">su -</span><br/><br/>
     <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cp index.html /var/www/html/index.html</span><br/><br/>
     <span style="font-family:courier; background-color: rgb(225, 225, 225); border-radius: 3px; margin-left: 10px;">cp index.css /var/www/html/index.css</span><br/></p>
     

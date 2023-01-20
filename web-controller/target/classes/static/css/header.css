@@ -22,9 +22,9 @@ a {
     color: white;
 }
 
-body {
-    overflow-y: scroll;
-}
+/*body {*/
+/*    overflow-y: scroll;*/
+/*}*/
 
 /* width */
 ::-webkit-scrollbar {

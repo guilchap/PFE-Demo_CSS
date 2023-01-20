@@ -1,0 +1,36 @@
+body {
+    margin: 0px;
+}
+
+#titre {
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    background-color: hsl(219, 72%, 38%);
+    color: white;
+    border-color: hsl(219, 72%, 38%);
+    margin-left: 35px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+}
+
+.bouton {
+    list-style-type: none;
+    text-align: center;
+    margin: 10%;
+    margin-top: 0%;
+    padding: 0%;
+}
+
+.bouton li {
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    width: 30%;
+}

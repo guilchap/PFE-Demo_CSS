@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/startRasp.css}" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+    <div>
+        <div th:replace="header/header"></div>
+    </div>
+    <p id="titre">Lancement des Raspberry</p>
+    <ul>
+      <li>
+        <span>Brancher la Raspberry noir (Raspberry Wifi)</span>
+      </li>
+      <li>
+        <span>Brancher les deux Raspberrys blanches (Raspberry Cluster Dijon et Angers)</span>
+      </li>
+      <li>
+        <span>Lancer le check de l'état des Raspberry</span>
+      </li>
+    </ul>
+    <a>
+        <form method="post">
+            <button class="verif" type="submit">Lancer la vérification</button>
+        </form>
+    </a>
+    <a th:href="@{/demo}">
+        <button class="retour">Retour</button>
+    </a>
+    <div>
+        <div th:replace="footer/footer"></div>
+    </div>
+</body>
+</html>

@@ -10,6 +10,18 @@
     <div>
         <div th:replace="header/header"></div>
     </div>
+    <div th:if="${result == 'failure'}">
+        <div class="alert">
+            <span class="closebtn">&times;</span>
+            <strong>Attention !</strong> Une erreur s'est produite.
+        </div>
+    </div>
+    <div th:if="${result == 'success'}">
+        <div class="alert success">
+            <span class="closebtn">&times;</span>
+            <strong>Réussite !</strong> Les cartes Raspberry sont fonctionnels.
+        </div>
+    </div>
     <p id="titre">Lancement des Raspberry</p>
     <ul>
       <li>
@@ -34,5 +46,18 @@
     <div>
         <div th:replace="footer/footer"></div>
     </div>
+
+    <script>
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function(){
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function(){ div.style.display = "none"; }, 600);
+            }
+        }
+    </script>
 </body>
 </html>

@@ -42,7 +42,8 @@ public class ApplicationController {
     }
 
     @PostMapping("/startRasp")
-    public void startScript() throws IOException {
+    public String startScript(Model model) throws IOException {
+        String result = "";
         ProcessBuilder pb = new ProcessBuilder();
         try{
             pb.command("sh", "/vagrant/data/checkRasp.sh");
@@ -58,9 +59,13 @@ public class ApplicationController {
                 }
 
             }
+            result = "success";
         }catch (Exception e){
             System.out.println("Le fichier spécifié est introuvable");
+            result = "failure";
         }
+        model.addAttribute("result", result);
+        return "startRasp";
     }
 
     @GetMapping("/grafana")
