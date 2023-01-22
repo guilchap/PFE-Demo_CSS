@@ -1,6 +1,3 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
 Vagrant.configure("2") do |config|  
     # Customize machine
     config.vm.provider "virtualbox" do |v|
@@ -23,6 +20,8 @@ Vagrant.configure("2") do |config|
         machine.vm.provision "shell", path: "scripts/install_grafana.sh"
         machine.vm.provision "shell", path: "scripts/install_docker.sh"
         machine.vm.provision "shell", path: "scripts/install_tomcat.sh"
+        machine.vm.provision "shell", inline: "sleep 30 && systemctl restart tomcat"
+
     end
 end
   
