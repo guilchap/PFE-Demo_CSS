@@ -23,6 +23,7 @@ apt install -y \
     >> $LOG_FILE_INSTALL 2>&1
 
 wget -q -O /home/pi$CITY/PFE-Demo_CSS/raspberry/data/prometheus.tar.gz https://github.com/prometheus/prometheus/releases/download/v2.40.1/prometheus-2.40.1.linux-armv7.tar.gz
+wget -q -O /home/pi$CITY/PFE-Demo_CSS/raspberry/data/netdata-kickstart.sh https://my-netdata.io/kickstart.sh 
 
 
 echo
