@@ -19,6 +19,7 @@ Laisser le temps à la VM de démarrer. <br/>
 Lors des demandes d'interface, choisir l'interface ethernet pour eth1 (1ere fois) et l'interface wifi pour eth2 (2eme fois).<br/>
 Brancher la carte Raspberry faisant office de wifi, se connecter au wifi avec le mot de passe. <br/><br/>
 
+### Connexion aux sites
 Se connecter au site Etudiant de la VM controleur à l'adresse: <br/>
 `http://192.168.25.5`<br/>
 ou dans le cas où le fichier hosts de la machine client a été modifié: <br/>
