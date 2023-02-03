@@ -11,7 +11,7 @@ Outil de virtualisation: virtualBox <br/>
 ## Démarrage de la VM
 
 ### Pré-requis
-Avoir installé sur l'ordinateur Vagrant, virtualbox.
+Avoir installé sur l'ordinateur Vagrant, virtualbox.<br/><br/>
 
 ### Démarrage
 Dans un terminal de commande, dans le dossier contenant le Vagrantfile, lancer la commande:<br/><br/> `vagrant up`<br/><br/>
