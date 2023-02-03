@@ -8,12 +8,6 @@ Memoire: 1024 <br/>
 network: ethernet, wifi (ip fixe) <br/>
 Outil de virtualisation: virtualBox <br/>
 
-## Informations sur le système finale
-
-La VM controleur possède de nombreux service comme apache, 
-tomcat pour le site web, grafana pour la supervision des Raspberry PI et 
-docker pour la conteneurisation d'un serveur linux.
-
 ## Démarrage de la VM
 
 ### Pré-requis
