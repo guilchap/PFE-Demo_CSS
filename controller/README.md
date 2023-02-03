@@ -10,8 +10,8 @@ Outil de virtualisation: virtualBox <br/>
 
 ## Informations sur le système finale
 
-La VM controleur possède de nomnbreux service comme apache, 
-tomact pour le site web, grafana pour la supervision des Raspberry PI et 
+La VM controleur possède de nombreux service comme apache, 
+tomcat pour le site web, grafana pour la supervision des Raspberry PI et 
 docker pour la conteneurisation d'un serveur linux.
 
 ## Démarrage de la VM
