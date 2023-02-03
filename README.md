@@ -1,8 +1,27 @@
-# PFE
+# PFE CSS 2022/2023
 
-Démonstrateur d'option CSS
+Est stocké dans cette branche git la page produit
 
-L'idée du projet est de construire un démonstrateur permettant de présenter des outils/compétences/problématiques étudiées dans l'option CSS.
-Le sujet est ouvert, mais devront sans doute être présent les notions de redondances, répartition de charge, monitoring etc...
+## Démonstrateur d'option CSS
 
-Journées Portes Ouvertes
+### Machine virtuelle Controleur
+
+Technologie de virtualisation: Vagrant<br/><br/>
+
+Arbre des fichiers:
+
+    ├── controller
+    |   ├── data
+    |   ├── logs
+    |   ├── scripts
+    |   ├── .gitignore
+    |   ├── README.md
+    |   └── Vagrantfile
+    └── README.md
+
+Les instructions pour construire et utiliser la machine virtuelle se trouve sur le README.md du dossier controller.<br/><br/>
+
+Informations sur le système finale :
+
+La VM controleur possède de nombreux service comme apache, tomcat pour le site web, grafana pour la supervision des Raspberry PI et 
+docker pour la conteneurisation d'un serveur linux.
