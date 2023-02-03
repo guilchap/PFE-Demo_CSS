@@ -23,5 +23,14 @@ Avoir installé sur l'ordinateur Vagrant, virtualbox.
 Dans un terminal de commande, dans le dossier contenant le Vagrantfile, lancer la commande:<br/><br/> `vagrant up`<br/><br/>
 Laisser le temps à la VM de démarrer. <br/>
 Lors des demandes d'interface, choisir l'interface ethernet pour eth1 (1ere fois) et l'interface wifi pour eth2 (2eme fois).<br/>
-Brancher la carte Raspberry faisant office de wifi, se connecter au wifi avec le mot de passe. <br/>
-Se connecter au site de la VM controleur à l'adresse: <br/><br/>`http://192.168.25.11`<br/><br/>
+Brancher la carte Raspberry faisant office de wifi, se connecter au wifi avec le mot de passe. <br/><br/>
+
+Se connecter au site Etudiant de la VM controleur à l'adresse: <br/>
+`http://192.168.25.5`<br/>
+ou dans le cas où le fichier hosts de la machine client a été modifié: <br/>
+`http://demo.css.eseo/`<br/><br/>
+
+Se connecter au site Admin de la VM controleur à l'adresse: <br/>
+`http://192.168.25.5/admin/`<br/>
+ou dans le cas où le fichier hosts de la machine client a été modifié: <br/>
+`http://demo.css.eseo/admin/`<br/>
