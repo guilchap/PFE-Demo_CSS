@@ -1,8 +1,12 @@
-# PFE
+# PFE CSS 2022/2023
 
-Démonstrateur d'option CSS
+Est stocké dans cette branche git la page produit
 
-L'idée du projet est de construire un démonstrateur permettant de présenter des outils/compétences/problématiques étudiées dans l'option CSS.
-Le sujet est ouvert, mais devront sans doute être présent les notions de redondances, répartition de charge, monitoring etc...
+## Démonstrateur d'option CSS
 
-Journées Portes Ouvertes
+### Page produit du site web Administrateur
+
+Langage: HTML & CSS
+
+Cette page décrit le projet du démonstrateur CSS. Une description précise de chaque activité est détaillée avec un schéma explicite.
+Les services et le matériel utilisés dans chaque activité sont énumérées dans cette page.
