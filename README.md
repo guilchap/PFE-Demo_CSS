@@ -1,6 +1,6 @@
 # PFE CSS 2022/2023
 
-Est stocké dans cette branche git la page produit
+Est stocké dans cette branche git la page produit donnant des informations sur le projet.
 
 ## Démonstrateur d'option CSS
 
