@@ -1,8 +1,22 @@
-# PFE
+# PFE CSS 2022/2023
 
-Démonstrateur d'option CSS
+Sont stockés dans cette branche git les fichiers sources des sites web du projet.
 
-L'idée du projet est de construire un démonstrateur permettant de présenter des outils/compétences/problématiques étudiées dans l'option CSS.
-Le sujet est ouvert, mais devront sans doute être présent les notions de redondances, répartition de charge, monitoring etc...
+## Démonstrateur d'option CSS
 
-Journées Portes Ouvertes
+### Sites Web 
+
+Technologie: *A remplir*
+
+Arbre des fichiers:
+
+    ├── etudiant
+    |   └── Fichiers sources du site étudiant
+    ├── web-controller
+    |   └── Fichiers sources du site administrateur
+    └── README.md
+
+Le dossier etudiant comprend toutes les ressources nécessaires à la création du site permettant au visiteur/étudiant de réaliser les activités.<br/>
+Le dossier web-controller comprend toutes les ressources nécessaires à la création du site destiné aux administrateurs du système.<br/><br/>
+
+Utilisation des fichiers sources: *A remplir*
