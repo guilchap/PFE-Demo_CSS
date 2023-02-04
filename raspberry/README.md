@@ -30,14 +30,15 @@ Pour les cartes simulant les datacenter, leur nom est déterminé par leur local
    - Entrer dans l'interface de configuration pour modifier le "WLAN Region"
         ```
         sudo raspi-config
+        Rédemmarage protentiellement recommandé
         ```
    - Installer git et le configurer
         ```
         sudo apt-get install -y git
         ```
-   - Cloner le repository dans le dossier souhaité
+   - Cloner le repository dans le dossier racine de l'utilisateur
         ```
-        cd /
+        cd /home/piWifi/
         sudo git clone --branch datacenter-wifi https://github.com/guilchap/PFE-Demo_CSS.git
         ```
    - Lancer le script de configuration du Wi-Fi
@@ -54,9 +55,10 @@ Pour les cartes simulant les datacenter, leur nom est déterminé par leur local
 
    - Brancher la carte en alimentation, HDMI, ethernet et au clavier
    - Se connecter avec l'utilisateur instancié lors de l'installation de l'OS sur la carte de stockage
-   - Entrer dans l'interface de configuration pour modifier le "WLAN Region"
+   - Entrer dans l'interface de configuration pour modifier le "WLAN Region" et "l'auto-login"
         ```
         sudo raspi-config
+        Rédemmarage protentiellement recommandé
         ```
    - Installer git et le configurer
         ```
@@ -64,16 +66,21 @@ Pour les cartes simulant les datacenter, leur nom est déterminé par leur local
         ```
    - Cloner le repository dans le dossier souhaité
         ```
-        cd /
+        # Datacenter Dijon
+        cd /home/piDijon/
+        sudo git clone --branch datacenter-wifi https://github.com/guilchap/PFE-Demo_CSS.git
+        
+        # Datacenter Angers
+        cd /home/piAngers/
         sudo git clone --branch datacenter-wifi https://github.com/guilchap/PFE-Demo_CSS.git
         ```
    - Installer tous les packages requis
         ```
         # Datacenter Dijon
-        sh /PFE-Demo_CSS/raspberry/dijon/install.sh
+        sh /home/piDijon/PFE-Demo_CSS/raspberry/dijon/install.sh
 
         # Datacenter Angers
-        sh /PFE-Demo_CSS/raspberry/angers/install.sh
+        sh /home/piAngers/PFE-Demo_CSS/raspberry/angers/install.sh
         ```
    - Rédemarrer la machine et débrancher les câbles HDMI et ethernet
         ```
@@ -86,7 +93,7 @@ Pour les cartes simulant les datacenter, leur nom est déterminé par leur local
    - Lancer le script de configuration Wi-Fi
         ```
         # Configuration Wi-Fi
-        sh /PFE-Demo_CSS/raspberry/dijon/conf_wifi.sh
+        sh /home/piDijon/PFE-Demo_CSS/raspberry/dijon/conf_wifi.sh
         ```
     - Entrer dans l'interface de configuration pour se connecter au Wi-Fi
         ```
@@ -95,13 +102,18 @@ Pour les cartes simulant les datacenter, leur nom est déterminé par leur local
     - Lancer les scripts de configuration
         ```
         # Configuration cluster
-        sh /PFE-Demo_CSS/raspberry/dijon/conf_cluster.sh 
+        sh /home/piDijon/PFE-Demo_CSS/raspberry/dijon/conf_cluster.sh 
 
-        # Configuration cluster
-        sh /PFE-Demo_CSS/raspberry/dijon/conf_prometheus.sh 
+        # Configuration Apache
+        sh /home/piDijon/PFE-Demo_CSS/raspberry/dijon/conf_apache.sh 
 
-        # Configuration cluster
-        sh /PFE-Demo_CSS/raspberry/dijon/conf_apache.sh 
+        # NON RECOMMANDE
+        # Configuration Prometheus
+        sh /home/piDijon/PFE-Demo_CSS/raspberry/dijon/conf_prometheus.sh 
+
+        # NON RECOMMANDE
+        # Configuration NetData
+        sh /home/piDijon/PFE-Demo_CSS/raspberry/dijon/conf_apache.sh
         ```
    - Rédemarrer la machine
         ```
@@ -113,7 +125,7 @@ Pour les cartes simulant les datacenter, leur nom est déterminé par leur local
    - Lancer le script de configuration Wi-Fi
         ```
         # Configuration Wi-Fi
-        sh /PFE-Demo_CSS/raspberry/dijon/conf_wifi.sh
+        sh /home/piAngers/PFE-Demo_CSS/raspberry/angers/conf_wifi.sh
         ```
     - Entrer dans l'interface de configuration pour se connecter au Wi-Fi
         ```
@@ -122,15 +134,35 @@ Pour les cartes simulant les datacenter, leur nom est déterminé par leur local
     - Lancer les scripts de configuration
         ```
         # Configuration cluster
-        sh /PFE-Demo_CSS/raspberry/angers/conf_cluster.sh 
+        sh /home/piAngers/PFE-Demo_CSS/raspberry/angers/conf_cluster.sh 
 
-        # Configuration cluster
-        sh /PFE-Demo_CSS/raspberry/angers/conf_prometheus.sh 
+        # Configuration Apache
+        sh /home/piAngers/PFE-Demo_CSS/raspberry/angers/conf_apache.sh
+        
+        # NON RECOMMANDE
+        # Configuration Prometheus
+        sh /home/piAngers/PFE-Demo_CSS/raspberry/angers/conf_prometheus.sh 
 
-        # Configuration cluster
-        sh /PFE-Demo_CSS/raspberry/angers/conf_apache.sh 
+        # NON RECOMMANDE
+        # Configuration NetData
+        sh /home/piAngers/PFE-Demo_CSS/raspberry/angers/conf_apache.sh
         ```
    - Rédemarrer la machine
         ```
         sudo reboot
         ```
+
+Variables utilisées dans le projet:
+   1. Identifiants des cartes Raspberry PI:
+      - Router Wifi : 
+         - username: piWifi
+         - password: raspwifi
+      - Datacenter Dijon : 
+         - username: piDijon
+         - password: raspdijon
+      - Datacenter Angers : 
+         - username: piAngers
+         - password: raspangers
+   2. Identifiants du Wifi:
+      - username: CSS-HOTSPOT
+      - password: Cl0udC0mputin9PF3
