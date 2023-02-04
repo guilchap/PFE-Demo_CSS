@@ -9,21 +9,19 @@
 - 1 carte SD
 
 *Suppléments lors de l'installation :*
-- *3 câbles ethernet*
-- *3 câbles HDMI*
-- *3 claviers*
-
+- *câble ethernet, câble HDMI, clavier*
 
 ## **Informations sur le système final**
 
-1 carte Raspberry sert de router Wi-Fi
+1 carte Raspberry PI sert de router Wi-Fi.
 
-2 cartes Raspberry servent de datacenter fonctionnant en cluster stockant des sites web.
+2 cartes Raspberry PI servent de datacenter fonctionnant en cluster hébergeant des sites web.
 
 
 ## **Installation**
 
-Par la suite les cartes Raspberry seront appelés par leur utilité. Pour les cartes simulant les datacenter, l'une est située à Angers l'autre à Dijon.
+Par la suite, les cartes Raspberry PI seront appelées par leur utilité.<br/>
+Pour les cartes simulant les datacenter, leur nom est déterminé par leur localisation : l'une à Angers et l'autre à Dijon.
 
 1. Router Wi-Fi (câble HDMI + câble ethernet requis)
 
