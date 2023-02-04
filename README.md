@@ -6,7 +6,7 @@ Sont stockés dans cette branche git les fichiers sources des sites web du proje
 
 ### Sites Web 
 
-Technologie: *A remplir*
+Technologie: Les deux projets sont des applications web basées sur String Boot. Le gestion de dépendances est faite avec Maven et la génération de pages html est faite grâce à Thymeleaf.
 
 Arbre des fichiers:
 
@@ -19,4 +19,4 @@ Arbre des fichiers:
 Le dossier etudiant comprend toutes les ressources nécessaires à la création du site permettant au visiteur/étudiant de réaliser les activités.<br/>
 Le dossier web-controller comprend toutes les ressources nécessaires à la création du site destiné aux administrateurs du système.<br/><br/>
 
-Utilisation des fichiers sources: *A remplir*
+Utilisation des fichiers sources: Les 2 projets ont été fait sur l'IDE IntelliJ IDEA, mais il est possible de convertir les projets pour les utiliser sur Eclipse.
